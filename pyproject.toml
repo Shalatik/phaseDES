@@ -1,0 +1,12 @@
+[project]
+name = "mev-sim"
+version = "0.1.0"
+description = "Discrete-event MEV simulation"
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+#pip install -e .
+#python -m des_mev_sim.main
