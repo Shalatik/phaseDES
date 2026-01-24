@@ -5,7 +5,7 @@ from mev_sim.objects.transaction import Tx
 @dataclass
 class Block:
     slot: int
-    builder_id: str
+    builder_id: int
     t_built: float
     txs: List[Tx] = field(default_factory=list)
 

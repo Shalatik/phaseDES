@@ -8,6 +8,7 @@ class Engine:
         self.state = state
         self._queue = []
         self._seq = itertools.count()
+        self.agents = {}
 
     def schedule(self, time: float, etype: str, payload=None):
         event = Event(time, next(self._seq), etype, payload)

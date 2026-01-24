@@ -12,7 +12,6 @@ class User:
         self.tick = tick
         self.nonce = 0
 
-        # důležité: per-user RNG => determinismus i když přidáš další agenty/eventy
         self.rng = random.Random(SEED + user_id)
 
     def on_event(self, event, engine):
@@ -38,6 +37,7 @@ class User:
                     priority_fee=1.0,
                     max_fee=fee,
                     nonce=self.nonce,
+                    real_index=0,
                     
                     payload={
                         "amount": amount,

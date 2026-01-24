@@ -3,11 +3,13 @@ from mev_sim.config.sim_constants import *
 from mev_sim.config.blockchain_constants import *
 from mev_sim.agents.user import User
 from mev_sim.agents.builder import Builder
+from mev_sim.agents.validator import Validator
 import logging
 from mev_sim.core.state import SimState
 from mev_sim.objects.amm_pool import AMMPool
+from dataclasses import replace
 
-def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=1):
+def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=3, n_validators=1):
     logger = logging.getLogger("mev_sim.run")
     
     state = SimState(
@@ -24,8 +26,13 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=1):
     }
     
     builders = {
-        b: Builder(builder_id=b, tick=builder_tick)
+        b: Builder(mev_agent_id=b, tick=builder_tick)
         for b in range(n_builders)
+    }
+
+    validators = {
+        v: Validator(validator_id=v)
+        for v in range(n_validators)
     }
 
     # sloty
@@ -40,25 +47,33 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=1):
 
     for b in builders:
         engine.schedule(0.0, BUILDER_TICK, {"builder_id": b})
-
+        
     def handler(event, engine):
-        # 1) globální eventy
-        if event.type in (SLOT_START, SLOT_END):
+        if event.type == SLOT_START:
             logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
             return
+        
+        if event.type == SLOT_END:
+            logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
+            validators[0].on_event(event, engine, builders)
+            return
 
-        # 2) eventy mířící na usery
         if event.type == USER_TICK:
             user_id = event.payload["user_id"]
             #logger.info(f"[t={engine.time:.3f}] USER_TICK user={user_id}")
             users[user_id].on_event(event, engine)
             return
 
-        # 3) debug výpis (zatím)
         if event.type == SEND_TX:
             tx = event.payload["tx"]
-            engine.state.mempool[tx.txid] = tx
-            logger.info(f"[t={engine.time:.3f}] User {tx.sender} sent tx {tx.txid}")
+            
+            idTx = engine.state.mempool_next_index
+            tx_with_index = replace(tx, real_index=idTx)
+            engine.state.mempool_next_index += 1
+            
+            engine.state.mempool[tx_with_index.txid] = tx_with_index
+            
+            logger.info(f"[t={engine.time:.3f}] User {tx.sender} MEMPOOL_ADD idx={idTx} sent tx {tx_with_index.txid}")
             return
         
         if event.type == BUILDER_TICK:

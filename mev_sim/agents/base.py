@@ -1,5 +1,5 @@
 class MEVAgent:
-    def __init__(self, mev_agent_id: str, tick: float):
+    def __init__(self, mev_agent_id: int, tick: float):
         self.id = mev_agent_id
         self.known_txs = {}
         self.tick = tick

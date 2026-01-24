@@ -9,3 +9,4 @@ class SimState:
     burn_fee: float  # wei
     
     mempool: dict[str, "Tx"] = field(default_factory=dict)
+    mempool_next_index: int = 0
