@@ -1,11 +1,20 @@
 from mev_sim.core.engine import Engine
 from mev_sim.config.sim_constants import *
+from mev_sim.config.blockchain_constants import *
 from mev_sim.agents.user import User
 import logging
+from mev_sim.core.state import SimState
+from mev_sim.objects.amm_pool import AMMPool
 
 def run_sim(n_slots=1, n_users=3, user_tick=0.5):
-    engine = Engine()
     logger = logging.getLogger("mev_sim.run")
+    
+    state = SimState(
+        amm_pool_a=AMMPool(str(AMM_POOL_A_NAME), int(AMM_POOL_A_ETH), int(AMM_POOL_A_USDC)),
+        amm_pool_b=AMMPool(str(AMM_POOL_B_NAME), int(AMM_POOL_B_ETH), int(AMM_POOL_B_USDC)),
+        burn_fee=INITIAL_BURN_FEE,
+    )
+    engine = Engine(state=state)
     
     # vytvoř usery
     users = {

@@ -3,8 +3,9 @@ import itertools
 from .event import Event
 
 class Engine:
-    def __init__(self):
+    def __init__(self, state):
         self.time = 0.0
+        self.state = state
         self._queue = []
         self._seq = itertools.count()
 
