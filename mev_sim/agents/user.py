@@ -1,6 +1,5 @@
 import random
 from dataclasses import dataclass
-from mev_sim.config.sim_constants import USER_TICK, SEND_TX
 from mev_sim.config.sim_constants import *
 from mev_sim.config.blockchain_constants import *
 from mev_sim.objects.transaction import Tx

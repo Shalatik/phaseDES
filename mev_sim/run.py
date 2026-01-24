@@ -2,11 +2,12 @@ from mev_sim.core.engine import Engine
 from mev_sim.config.sim_constants import *
 from mev_sim.config.blockchain_constants import *
 from mev_sim.agents.user import User
+from mev_sim.agents.builder import Builder
 import logging
 from mev_sim.core.state import SimState
 from mev_sim.objects.amm_pool import AMMPool
 
-def run_sim(n_slots=1, n_users=3, user_tick=0.5):
+def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=1):
     logger = logging.getLogger("mev_sim.run")
     
     state = SimState(
@@ -21,6 +22,11 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5):
         u: User(user_id=u, tick=user_tick)
         for u in range(n_users)
     }
+    
+    builders = {
+        b: Builder(builder_id=b, tick=builder_tick)
+        for b in range(n_builders)
+    }
 
     # sloty
     for s in range(n_slots):
@@ -31,6 +37,9 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5):
     # start user ticků (t=0 pro všechny)
     for u in users:
         engine.schedule(0.0, USER_TICK, {"user_id": u})
+
+    for b in builders:
+        engine.schedule(0.0, BUILDER_TICK, {"builder_id": b})
 
     def handler(event, engine):
         # 1) globální eventy
@@ -48,9 +57,16 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5):
         # 3) debug výpis (zatím)
         if event.type == SEND_TX:
             tx = event.payload["tx"]
+            engine.state.mempool[tx.txid] = tx
             logger.info(f"[t={engine.time:.3f}] User {tx.sender} sent tx {tx.txid}")
             return
-
+        
+        if event.type == BUILDER_TICK:
+            builder_id = event.payload["builder_id"]
+            logger.info(f"[t={engine.time:.3f}] BUILDER_TICK builder={builder_id}")
+            builders[builder_id].on_event(event, engine)
+            return
+        
         logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
 
     engine.run(until=n_slots * SLOT_LEN, handler=handler)

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+from mev_sim.objects.transaction import Tx
 
 @dataclass
 class Block:

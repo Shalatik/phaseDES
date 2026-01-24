@@ -1,7 +1,11 @@
-class Agent:
-    def __init__(self, agent_id: str):
-        self.id = agent_id
+class MEVAgent:
+    def __init__(self, mev_agent_id: str, tick: float):
+        self.id = mev_agent_id
         self.known_txs = {}
+        self.tick = tick
+
+    def sync_mempool(self, engine):
+        self.known_txs = dict(engine.state.mempool)
 
     def on_event(self, event, engine):
         pass
