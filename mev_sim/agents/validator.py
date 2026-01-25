@@ -2,7 +2,7 @@ import random
 import logging
 from mev_sim.config.sim_constants import *
 from mev_sim.config.blockchain_constants import *
-from mev_sim.config.sim_constants import SLOT_END
+from mev_sim.config.sim_init import SLOT_END
 from mev_sim.core.engine import Engine
 
 logger = logging.getLogger("mev_sim.agent.validator")

@@ -1,6 +1,7 @@
 from mev_sim.core.engine import Engine
 from mev_sim.config.sim_constants import *
 from mev_sim.config.blockchain_constants import *
+from mev_sim.config.sim_init import *
 from mev_sim.agents.user import User
 from mev_sim.agents.builder import Builder
 from mev_sim.agents.validator import Validator

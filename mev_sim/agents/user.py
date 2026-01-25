@@ -1,6 +1,7 @@
 import random
 from dataclasses import dataclass
 from mev_sim.config.sim_constants import *
+from mev_sim.config.sim_init import *
 from mev_sim.config.blockchain_constants import *
 from mev_sim.objects.transaction import Tx
 
@@ -34,7 +35,7 @@ class User:
                     
                     tx_type="swap",
                     gas_used=GAS_SWAP,
-                    priority_fee=1.0,
+                    priority_fee=1.0, #FIXME:
                     max_fee=fee,
                     nonce=self.nonce,
                     real_index=0,
