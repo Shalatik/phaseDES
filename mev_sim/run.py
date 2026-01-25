@@ -54,8 +54,8 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=3, n
             return
         
         if event.type == SLOT_END:
-            logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
             validators[0].on_event(event, engine, builders)
+            logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
             return
 
         if event.type == USER_TICK:

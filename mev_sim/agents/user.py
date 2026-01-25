@@ -38,6 +38,7 @@ class User:
                     max_fee=fee,
                     nonce=self.nonce,
                     real_index=0,
+                    status="pending",
                     
                     payload={
                         "amount": amount,

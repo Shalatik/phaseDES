@@ -20,8 +20,8 @@
 [t=9.500] User A1 MEMPOOL_ADD idx=14 sent tx A1-tx7
 [t=10.000] User A0 MEMPOOL_ADD idx=15 sent tx A0-tx2
 [t=11.000] User A0 MEMPOOL_ADD idx=16 sent tx A0-tx3
-[t=12.000] SLOT_END {'slot': 0}
 [t=12.000] VALIDATOR slot=0 chose=0 block_len=0
+[t=12.000] SLOT_END {'slot': 0}
 [t=12.000] SLOT_START {'slot': 1}
 [t=12.000] BUILDER_TICK builder=0
 [t=12.000] User A2 MEMPOOL_ADD idx=17 sent tx A2-tx5
@@ -40,6 +40,6 @@
 [t=21.000] BUILDER_TICK builder=0
 [t=22.000] User A2 MEMPOOL_ADD idx=28 sent tx A2-tx10
 [t=22.500] User A0 MEMPOOL_ADD idx=29 sent tx A0-tx8
-[t=24.000] SLOT_END {'slot': 1}
 [t=24.000] VALIDATOR slot=1 chose=0 block_len=0
+[t=24.000] SLOT_END {'slot': 1}
 [t=24.000] BUILDER_TICK builder=0

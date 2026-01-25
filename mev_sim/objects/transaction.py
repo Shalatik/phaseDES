@@ -13,6 +13,7 @@ class Tx:
     max_fee: float
     nonce: int
     real_index: Optional[int] = None
+    status: str
 
     payload: Dict[str, Any] = field(default_factory=dict)
     
