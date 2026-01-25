@@ -1,6 +1,7 @@
 # mev_sim/sim/state.py
 from dataclasses import dataclass, field
 from mev_sim.objects.amm_pool import AMMPool
+from mev_sim.objects.account import Account
 
 @dataclass
 class SimState:
@@ -10,3 +11,5 @@ class SimState:
     
     mempool: dict[str, "Tx"] = field(default_factory=dict)
     mempool_next_index: int = 0
+
+    accounts: dict[str, Account] = field(default_factory=dict)

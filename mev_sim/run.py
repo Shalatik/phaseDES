@@ -8,8 +8,10 @@ import logging
 from mev_sim.core.state import SimState
 from mev_sim.objects.amm_pool import AMMPool
 from dataclasses import replace
+from mev_sim.objects.account import Account
+from mev_sim.utils.snapshots import format_pools, format_users
 
-def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=3, n_validators=1):
+def run_sim():
     logger = logging.getLogger("mev_sim.run")
     
     state = SimState(
@@ -19,48 +21,34 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=3, n
     )
     engine = Engine(state=state)
     
-    # vytvoř usery
-    users = {
-        u: User(user_id=u, tick=user_tick)
-        for u in range(n_users)
-    }
-    
-    builders = {
-        b: Builder(mev_agent_id=b, tick=builder_tick)
-        for b in range(n_builders)
-    }
-
-    validators = {
-        v: Validator(validator_id=v)
-        for v in range(n_validators)
-    }
-
     # sloty
-    for s in range(n_slots):
+    for s in range(N_SLOTS):
         t0 = s * SLOT_LEN
         engine.schedule(t0, SLOT_START, {"slot": s})
         engine.schedule(t0 + SLOT_LEN, SLOT_END, {"slot": s})
 
-    # start user ticků (t=0 pro všechny)
-    for u in users:
-        engine.schedule(0.0, USER_TICK, {"user_id": u})
-
-    for b in builders:
-        engine.schedule(0.0, BUILDER_TICK, {"builder_id": b})
+    users, builders, validators = init_agents(engine)
+        
+    user_ids = [users[u].id for u in users]    
         
     def handler(event, engine):
         if event.type == SLOT_START:
-            logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
+            slot = event.payload["slot"]
+            logger.info(f"[t={engine.time:.3f}] SLOT_START slot={slot}")
+            logger.info(f"[t={engine.time:.3f}] POOLS_START {format_pools(engine.state)}")
+            logger.info(f"[t={engine.time:.3f}] USERS_START {format_users(engine.state, user_ids)}")
             return
         
         if event.type == SLOT_END:
+            slot = event.payload["slot"]
             validators[0].on_event(event, engine, builders)
-            logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
+            logger.info(f"[t={engine.time:.3f}] SLOT_END slot={slot}")
+            logger.info(f"[t={engine.time:.3f}] POOLS_END {format_pools(engine.state)}")
+            logger.info(f"[t={engine.time:.3f}] USERS_END {format_users(engine.state, user_ids)}")
             return
 
         if event.type == USER_TICK:
             user_id = event.payload["user_id"]
-            #logger.info(f"[t={engine.time:.3f}] USER_TICK user={user_id}")
             users[user_id].on_event(event, engine)
             return
 
@@ -77,11 +65,52 @@ def run_sim(n_slots=1, n_users=3, user_tick=0.5, n_builders=1, builder_tick=3, n
             return
         
         if event.type == BUILDER_TICK:
+            slot = int(engine.time // SLOT_LEN)
             builder_id = event.payload["builder_id"]
             logger.info(f"[t={engine.time:.3f}] BUILDER_TICK builder={builder_id}")
-            builders[builder_id].on_event(event, engine)
+            builders[builder_id].on_event(event, engine, slot)
             return
         
         logger.info(f"[t={engine.time:.3f}] {event.type} {event.payload}")
 
-    engine.run(until=n_slots * SLOT_LEN, handler=handler)
+    engine.run(until=N_SLOTS * SLOT_LEN, handler=handler)
+
+
+def init_agents(engine):
+    users = {
+        u: User(user_id=u, tick=USER_TICK)
+        for u in range(N_USERS)
+    }
+    
+    builders = {
+        b: Builder(mev_agent_id=b, tick=BUILDER_TICK)
+        for b in range(N_BUILDERS)
+    }
+
+    validators = {
+        v: Validator(validator_id=v)
+        for v in range(N_VALIDATORS)
+    }
+
+    for u in users:
+        engine.schedule(0.0, USER_TICK, {"user_id": u})
+
+    for b in builders:
+        engine.schedule(0.0, BUILDER_TICK, {"builder_id": b})
+        
+
+    for u in users.values():
+        engine.state.accounts[u.id] = Account(
+            eth_wei=USER_WEI,    
+            usdc_units=USER_USDC_MICRO,  
+            nonce=0
+        )
+
+    for b in builders.values():
+        engine.state.accounts[b.id] = Account(
+            eth_wei=BUILDER_WEI,
+            usdc_units=BUILDER_USDC_MICRO,
+            nonce=0
+        )
+        
+    return users, builders, validators

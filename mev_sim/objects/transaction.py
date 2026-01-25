@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Any, Dict, Optional
 
-@dataclass(frozen=True)
+@dataclass()
 class Tx:
     txid: str
     sender: str
@@ -12,8 +12,8 @@ class Tx:
     priority_fee: float
     max_fee: float
     nonce: int
-    real_index: Optional[int] = None
     status: str
+    real_index: Optional[int] = None
 
     payload: Dict[str, Any] = field(default_factory=dict)
     

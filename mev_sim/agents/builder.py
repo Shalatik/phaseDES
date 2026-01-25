@@ -13,14 +13,16 @@ class Builder(MEVAgent):
         self.best_block = Block(slot=-1, builder_id=self.id, t_built=0.0, txs=[])
         self.nonce = 0
 
-    def on_event(self, event, engine):
+    def on_event(self, event, engine, slot):
         if event.type == BUILDER_TICK:
             
             self.sync_mempool(engine)
             mempool = list(self.known_txs.values())
             
             #prepocita nejlepsi block
-            self.best_block = self.order_based_fee(mempool, engine.state.burn_fee)
+            final_block = self.order_based_fee(mempool, engine.state.burn_fee)
+            self.best_block = Block(slot=slot, builder_id=self.id, t_built=engine.time, txs=final_block)
+            
             #prida svoje transakce
         
         engine.schedule(engine.time + self.tick, BUILDER_TICK, {"builder_id": self.id})
@@ -30,6 +32,8 @@ class Builder(MEVAgent):
         valid_txs = [tx for tx in mempool if tx.max_fee >= burn_fee]
     
         by_sender = defaultdict(list)
+        for tx in valid_txs:
+            by_sender[tx.sender].append(tx)
         for s in by_sender:
             by_sender[s].sort(key=lambda x: x.nonce)
 

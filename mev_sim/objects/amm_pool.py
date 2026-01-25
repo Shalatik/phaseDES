@@ -8,11 +8,15 @@ class AMMPool:
     eth_reserve: int
     usdc_reserve: int
 
-    def snapshot(self) -> tuple[str, int, int]:
-        return self.name, self.eth_reserve, self.usdc_reserve
+    def snapshot(self) -> dict:
+        return {
+            "name": self.name,
+            "eth": self.eth_reserve,
+            "usdc": self.usdc_reserve,
+        }
 
-    def execute_swap(self, amount_in, is_eth_to_usdc, min_out) -> int:
-        amount_out = self.calculate_out(amount_in, is_eth_to_usdc)
+    def execute_swap(self, amount_in, target_token, min_out) -> int:
+        amount_out = self.calculate_out(amount_in, target_token)
 				
         if amount_out < min_out:
             return False, 0 # REVERT
@@ -26,9 +30,13 @@ class AMMPool:
 
         return True, amount_out
     
-    def calculate_out(self, amount_in, is_eth_to_usdc):
+    def calculate_out(self, amount_in, target_token):
         if amount_in <= 0: return 0
-        res_in, res_out = (self.eth_reserve, self.usdc_reserve) if is_eth_to_usdc else (self.usdc_reserve, self.eth_reserve)
+        
+        if target_token == ETH_TO_USDC:
+            res_in, res_out = (self.eth_reserve, self.usdc_reserve)
+        else:
+          res_in, res_out = (self.usdc_reserve, self.eth_reserve)
         
         amount_in_with_fee = amount_in * 997
         numerator = amount_in_with_fee * res_out

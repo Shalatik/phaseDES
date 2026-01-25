@@ -3,7 +3,7 @@ from mev_sim.utils.logging import setup_logging
 
 def main():
     setup_logging("outputs/output_log.txt")
-    run_sim(n_slots=2)
+    run_sim()
 
 if __name__ == "__main__":
     main()

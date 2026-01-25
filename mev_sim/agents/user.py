@@ -19,13 +19,13 @@ class User:
             # rozhodnutí: poslat tx?
             if self.rng.random() < P_SEND:
                 fee = engine.state.burn_fee * 1.5
-                target_amm_pool, target_amm_pool_eth, target_amm_pool_usdc = engine.state.amm_pool_a.snapshot() if self.rng.random() < 0.5 else engine.state.amm_pool_b.snapshot()
+                target_amm_pool = engine.state.amm_pool_a.snapshot() if self.rng.random() < 0.5 else engine.state.amm_pool_b.snapshot()
                 target_token = ETH_TO_USDC if self.rng.random() < 0.5 else USDC_TO_ETH
                 
                 if target_token == ETH_TO_USDC:
-                    amount = int(random.uniform(0.1, 0.5) * WEI_TO_ETH)
+                    amount = int(self.rng.random() * ETH_TO_WEI)
                 else:
-                    amount = int(random.uniform(500, 1000) * USDC_DECIMALS)
+                    amount = int(self.rng.random() * 1000 * USDC_MICRO)
                 
                 tx = Tx(
                     txid=f"{self.id}-tx{self.nonce}",
@@ -43,7 +43,7 @@ class User:
                     payload={
                         "amount": amount,
                         "token": target_token,
-                        "amm_pool": target_amm_pool,
+                        "amm_pool": target_amm_pool['name'],
                         "min_out": 0.99, #int(expected_out * 0.99), #TODO:
                     },
                 )

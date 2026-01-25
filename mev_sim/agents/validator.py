@@ -30,17 +30,17 @@ class Validator:
 
 			gas_used_in_block = self.execute_block(block, engine)
 			engine.state.burn_fee = self.calculate_new_burn_fee(engine.state.burn_fee, gas_used_in_block)
-			self.update_mempool(block, engine)
+			self.update_mempool(block.txs, engine.state.mempool)
 
 
-	def update_mempool(self, block, engine):
-		for tx in block:
-			engine.state.mempool.pop(tx.txid, None)
+	def update_mempool(self, txs, mempool):
+		for tx in txs:
+			mempool.pop(tx.txid, None)
 
 	def execute_block(self, block, engine):
 		gas_used_in_block = 0
 		success_count = 0
-		for tx in block:
+		for tx in block.txs:
 			status = self.execute_transaction(tx, engine)
 			if status == "success":
 				success_count += 1
@@ -48,54 +48,47 @@ class Validator:
 				gas_used_in_block += tx.gas_used
 		return gas_used_in_block
 
-	def calculate_new_burn_fee(self, current_burn_fee, gas_used):
-		delta = gas_used - BLOCK_TARGET_GAS
-		change = current_burn_fee * (delta / BLOCK_TARGET_GAS) * BURN_FEE_MAX_CHANGE
-		return max(MIN_BURN_FEE, current_burn_fee + change)
 
 	def execute_transaction(self, tx, engine):
-		agent = tx.sender
+		account = engine.state.accounts[tx.sender]
 
 		tip_per_gas_gwei = tx.effective_priority_fee(engine.state.burn_fee)
-		burned_wei = int(tx.gas_used * engine.state.burn_fee * WEI_TO_GWEI)
-		validator_tip_wei = int(tx.gas_used * tip_per_gas_gwei * WEI_TO_GWEI)
+		burned_wei = int(tx.gas_used * engine.state.burn_fee)
+		validator_tip_wei = int(tx.gas_used * tip_per_gas_gwei)
 		cost_wei = burned_wei + validator_tip_wei
 
-		if agent.inventory_eth_wei < cost_wei:
-			tx.status = "reverted_no_gas"
-			return tx.status
+		# if account.eth_wei < cost_wei:
+		# 	tx.status = "reverted_no_gas"
+		# 	return tx.status
 
-
-
-		agent.inventory_eth_wei -= cost_wei
-
+		account.eth_wei -= cost_wei
 
 		target_amount = int(tx.payload['amount'])
 
 		if target_amount == 0:
-			target_amount = agent.last_received_amount
+			target_amount = account.last_received_amount
 
-		target_token = tx.payload['token']
+		target_token = str(tx.payload['token'])
 		amm_pool = engine.state.amm_pool_a if tx.payload["amm_pool"] == AMM_POOL_A_NAME else engine.state.amm_pool_b
 
-		if target_token == ETH_TO_USDC and agent.inventory_eth_wei < target_amount:
-			tx.status = "reverted_insufficient_funds"
-			return tx.status
-		if target_token == USDC_TO_ETH and agent.inventory_usdc_units < target_amount:
-			tx.status = "reverted_insufficient_funds"
-			return tx.status
+		# if target_token == ETH_TO_USDC and account.eth_wei < target_amount:
+		# 	tx.status = "reverted_insufficient_funds"
+		# 	return tx.status
+		# if target_token == USDC_TO_ETH and account.usdc_units < target_amount:
+		# 	tx.status = "reverted_insufficient_funds"
+		# 	return tx.status
 
-		success, out = amm_pool.execute_swap(target_amount, target_token, tx.min_out)
+		success, out = amm_pool.execute_swap(target_amount, target_token, 0)
 
 		if success:
 			if target_token == ETH_TO_USDC:
-				agent.inventory_eth_wei -= target_amount
-				agent.inventory_usdc_units += out
+				account.eth_wei -= target_amount
+				account.usdc_units += out
 			else:
-				agent.inventory_usdc_units -= target_amount
-				agent.inventory_eth_wei += out
+				account.usdc_units -= target_amount
+				account.eth_wei += out
 
-			agent.last_received_amount = out
+			account.last_received_amount = out
 			tx.status = "success"
 		else:
 			tx.status = "reverted_slippage"
@@ -104,3 +97,7 @@ class Validator:
 
 
 
+	def calculate_new_burn_fee(self, current_burn_fee, gas_used):
+		delta = gas_used - BLOCK_TARGET_GAS
+		change = current_burn_fee * (delta / BLOCK_TARGET_GAS) * BURN_FEE_MAX_CHANGE
+		return max(MIN_BURN_FEE, current_burn_fee + change)
