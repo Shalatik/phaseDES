@@ -31,7 +31,9 @@ def run_sim():
 
     users, builders, validators = init_agents(engine)
         
-    user_ids = [users[u].id for u in users]    
+    user_ids = [users[u].id for u in users] 
+    builder_ids = [users[b].id for b in builders]    
+       
         
     def handler(event, engine):
         if event.type == SLOT_START:
@@ -39,6 +41,7 @@ def run_sim():
             logger.info(f"[t={engine.time:.3f}] SLOT_START slot={slot}")
             logger.info(f"[t={engine.time:.3f}] POOLS_START {format_pools(engine.state)}")
             logger.info(f"[t={engine.time:.3f}] USERS_START {format_users(engine.state, user_ids)}")
+            logger.info(f"[t={engine.time:.3f}] BUILDER_START {format_users(engine.state, builder_ids)}")
             return
         
         if event.type == SLOT_END:
@@ -47,6 +50,7 @@ def run_sim():
             logger.info(f"[t={engine.time:.3f}] SLOT_END slot={slot}")
             logger.info(f"[t={engine.time:.3f}] POOLS_END {format_pools(engine.state)}")
             logger.info(f"[t={engine.time:.3f}] USERS_END {format_users(engine.state, user_ids)}")
+            logger.info(f"[t={engine.time:.3f}] BUILDER_END {format_users(engine.state, builder_ids)}")
             logger.info(f"----------------------------------------------------------")
             return
 

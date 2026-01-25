@@ -24,7 +24,8 @@ class Validator:
 			block = chosen_builder.best_block
 
 			logger.info(
-				f"[t={engine.time:.3f}] VALIDATOR slot={slot} chose={chosen_builder.id} "
+				f"\n"
+				f"[t={engine.time:.3f}] VALIDATOR slot={slot} builder id={chosen_builder.id} "
 				f"block_len={len(block.txs) if hasattr(block, 'txs') else len(block)}"
 			)
 

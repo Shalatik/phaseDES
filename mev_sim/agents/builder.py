@@ -27,9 +27,11 @@ class Builder(MEVAgent):
             # final_block = self.order_based_fee(mempool, engine.state.burn_fee)
             # self.best_block = Block(slot=slot, builder_id=self.id, t_built=engine.time, txs=final_block)
             
-            txs = self.strategy.build_block(mempool, engine.state.burn_fee, engine.state, slot, engine.time. self)
-            self.best_block = Block(slot=slot, builder_id=self.id, t_built=engine.time, txs=txs)
+            txs = self.strategy.build_block(mempool, engine.state.burn_fee, engine.state, slot, engine.time, self)
+            new_block = Block(slot=slot, builder_id=self.id, t_built=engine.time, txs=txs)
             
+            if True: #TODO: výnos z toho blocku pro buildera bude větší
+                self.best_block = new_block
             #prida svoje transakce
         
         engine.schedule(engine.time + self.tick, BUILDER_TICK_EVENT, {"builder_id": self.id})

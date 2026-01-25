@@ -21,80 +21,73 @@ class OrderBasedFeeStrategy:
 
 class SandwichOnlyStrategy:
 	name = "sandwich_only"
- 
+
 	def build_block(self, mempool, burn_fee, state, slot, t, builder) -> List[Tx]:
-		
+		# baseline: txs seřazené podle fee (předpoklad: vrací list[Tx])
 		block = order_based_fee(mempool, burn_fee)
-  
-		for tx in block.txs:
-			if tx.tx_type == "swap": # and tx.sender == "user"
+
+		# najdi první user swap (nebo si vyber jinak)
+		victim = None
+		for tx in block:
+			if tx.tx_type == "swap": # and tx.sender.startswith("A"):  # nebo jak poznáš usery
+				
 				front_run_token = tx.payload["token"]
 				amm_pool = tx.payload["amm_pool"]
-
-				if front_run_token == ETH_TO_USDC:
-					amount = int(self.rng.random() * ETH_TO_WEI * 5)
+				victim_amount = tx.payload["amount"]
+				if front_run_token == ETH_TO_USDC and victim_amount >= (0.7 * ETH_TO_WEI ): #TODO: vyplati se?
+					amount = int(builder.rng.random() * ETH_TO_WEI * 5)
 					back_run_token = USDC_TO_ETH
-				else:
-					amount = int(self.rng.random() * 1000 * USDC_MICRO * 5)
+					victim = tx
+					break
+				elif victim_amount >= (0.7 * 1000 * USDC_MICRO):
+					amount = int(builder.rng.random() * 1000 * USDC_MICRO * 5)
 					back_run_token = ETH_TO_USDC
+					victim = tx
+					break
+				else:
+					continue
 
-				tx_front_run = Tx(
-					txid = f"B{builder.id}-tx{builder.nonce}",
-					sender=builder.id,
-					t_created=t,
-					
-					tx_type="swap",
-					gas_used=GAS_SWAP,
-					priority_fee=tx.priority_fee + 1.0,
-					max_fee=state.burn_fee + 20,
-					nonce=self.nonce,
-					real_index=0,
-					status="pending",
-					
-					payload={
-						"amount": amount,
-						"token": front_run_token,
-						"amm_pool": amm_pool,
-					},
-				)
+		if victim is None:
+			return block
 
-				tx_back_run = Tx(
-					txid= f"B{builder.id}-tx{builder.nonce+1}",
-					sender=builder.id,
-					t_created=t,
-					
-					tx_type="swap",
-					gas_used=GAS_SWAP,
-					priority_fee=tx.priority_fee + 0.5,
-					max_fee=state.burn_fee + 20,
-					nonce=self.nonce + 1,
-					real_index=0,
-					status="pending",
-					
-					payload={
-						"amount": amount,
-						"token": back_run_token,
-						"amm_pool": amm_pool,
-					},
-				)
-                
-				block.append(tx_front_run)
-				block.append(tx_back_run)
-    
-				out = []
-				inserted = False
-				for tx in block_txs:
-					if (not inserted) and tx.txid == victim.txid:
-						out.append(tx_front_run)
-						out.append(tx)          # victim
-						out.append(tx_back_run)
-						inserted = True
-					else:
-						out.append(tx)
-    
-				self.nonce += 2
-				break # Jeden útok na slot stačí zatím TODO:
-		return block
+		# unikátní txid + nonce
+		txid_front = f"B{builder.id}-tx{builder.nonce}"
+		txid_back  = f"B{builder.id}-tx{builder.nonce+1}"
+
+		tx_front_run = Tx(
+			txid=txid_front,
+			sender=builder.id,
+			t_created=t,
+			tx_type="swap",
+			gas_used=GAS_SWAP,
+			priority_fee=victim.priority_fee + 0.5,
+			max_fee=burn_fee + 20,
+			nonce=builder.nonce,
+			real_index=0,
+			status="pending",
+			payload={"amount": amount, "token": front_run_token, "amm_pool": amm_pool},
+		)
+
+		tx_back_run = Tx(
+			txid=txid_back,
+			sender=builder.id,
+			t_created=t,
+			tx_type="swap",
+			gas_used=GAS_SWAP,
+			priority_fee=victim.priority_fee - 0.5,
+			max_fee=burn_fee + 20,
+			nonce=builder.nonce + 1,
+			real_index=0,
+			status="pending",
+			payload={"amount": amount, "token": back_run_token, "amm_pool": amm_pool},
+		)
+
+		builder.nonce += 2
+
+		block.append(tx_front_run)
+		block.append(tx_back_run)
+		return order_based_fee(block, burn_fee) #TODO: tohle asi neni idealni
+
 
 @staticmethod
 def order_based_fee(mempool, burn_fee):

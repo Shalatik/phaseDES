@@ -13,7 +13,7 @@ BUILDER_TICK_INTERVAL = 3
 N_VALIDATORS = 1
 
 ACTIVE_BUILDERS = [
-	# {"type": "fee_order"},
+	{"type": "fee_order"},
 	{"type": "sandwich_only"},
 	# {"type": "arbitrage_only"},
 	# {"type": "mev_play_it_safe"},

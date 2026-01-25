@@ -12,4 +12,149 @@ A2 | 100.0 | 100000.0 | 0
 A3 | 100.0 | 100000.0 | 0
 A4 | 100.0 | 100000.0 | 0
 
+[t=0.000] BUILDER_START 
+id | eth | usdc | nonce
+A0 | 100.0 | 100000.0 | 0
+A1 | 100.0 | 100000.0 | 0
+
 [t=0.000] BUILDER_TICK builder=0
+[t=0.000] BUILDER_TICK builder=1
+[t=0.500] User A1 MEMPOOL_ADD idx=0 sent tx A1-tx0
+[t=1.000] User A2 MEMPOOL_ADD idx=1 sent tx A2-tx0
+[t=1.000] User A3 MEMPOOL_ADD idx=2 sent tx A3-tx0
+[t=1.500] User A1 MEMPOOL_ADD idx=3 sent tx A1-tx1
+[t=2.000] User A0 MEMPOOL_ADD idx=4 sent tx A0-tx0
+[t=2.000] User A1 MEMPOOL_ADD idx=5 sent tx A1-tx2
+[t=2.000] User A3 MEMPOOL_ADD idx=6 sent tx A3-tx1
+[t=2.500] User A1 MEMPOOL_ADD idx=7 sent tx A1-tx3
+[t=3.000] BUILDER_TICK builder=0
+[t=3.000] BUILDER_TICK builder=1
+[t=3.500] User A4 MEMPOOL_ADD idx=8 sent tx A4-tx0
+[t=4.500] User A1 MEMPOOL_ADD idx=9 sent tx A1-tx4
+[t=4.500] User A2 MEMPOOL_ADD idx=10 sent tx A2-tx1
+[t=4.500] User A3 MEMPOOL_ADD idx=11 sent tx A3-tx2
+[t=5.000] User A1 MEMPOOL_ADD idx=12 sent tx A1-tx5
+[t=5.000] User A2 MEMPOOL_ADD idx=13 sent tx A2-tx2
+[t=5.000] User A4 MEMPOOL_ADD idx=14 sent tx A4-tx1
+[t=6.000] BUILDER_TICK builder=0
+[t=6.000] BUILDER_TICK builder=1
+[t=6.000] User A2 MEMPOOL_ADD idx=15 sent tx A2-tx3
+[t=6.500] User A0 MEMPOOL_ADD idx=16 sent tx A0-tx1
+[t=7.500] User A1 MEMPOOL_ADD idx=17 sent tx A1-tx6
+[t=7.500] User A3 MEMPOOL_ADD idx=18 sent tx A3-tx3
+[t=8.000] User A4 MEMPOOL_ADD idx=19 sent tx A4-tx2
+[t=8.500] User A3 MEMPOOL_ADD idx=20 sent tx A3-tx4
+[t=9.000] BUILDER_TICK builder=0
+[t=9.000] BUILDER_TICK builder=1
+[t=9.000] User A0 MEMPOOL_ADD idx=21 sent tx A0-tx2
+[t=9.000] User A4 MEMPOOL_ADD idx=22 sent tx A4-tx3
+[t=9.500] User A0 MEMPOOL_ADD idx=23 sent tx A0-tx3
+[t=9.500] User A3 MEMPOOL_ADD idx=24 sent tx A3-tx5
+[t=11.000] User A2 MEMPOOL_ADD idx=25 sent tx A2-tx4
+[t=11.000] User A3 MEMPOOL_ADD idx=26 sent tx A3-tx6
+[t=11.500] User A2 MEMPOOL_ADD idx=27 sent tx A2-tx5
+
+[t=12.000] VALIDATOR slot=0 builder id=0 block_len=21
+[t=12.000] SLOT_END slot=0
+[t=12.000] POOLS_END 
+pool | eth | usdc
+A | 14145696242011913884202 | 54012079439035
+B | 17145890234792422825057 | 54015258707877
+
+[t=12.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 99.0 | 2121464984.0 | 0
+A1 | 97.0 | 8108460619.0 | 0
+A2 | 98.0 | 4884763997.0 | 0
+A3 | 98.0 | 3811706575.0 | 0
+A4 | 99.0 | 403956913.0 | 0
+
+[t=12.000] BUILDER_END 
+id | eth | usdc | nonce
+A0 | 99.0 | 2121464984.0 | 0
+A1 | 97.0 | 8108460619.0 | 0
+
+----------------------------------------------------------
+[t=12.000] SLOT_START slot=1
+[t=12.000] POOLS_START 
+pool | eth | usdc
+A | 14145696242011913884202 | 54012079439035
+B | 17145890234792422825057 | 54015258707877
+
+[t=12.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 99.0 | 2121464984.0 | 0
+A1 | 97.0 | 8108460619.0 | 0
+A2 | 98.0 | 4884763997.0 | 0
+A3 | 98.0 | 3811706575.0 | 0
+A4 | 99.0 | 403956913.0 | 0
+
+[t=12.000] BUILDER_START 
+id | eth | usdc | nonce
+A0 | 99.0 | 2121464984.0 | 0
+A1 | 97.0 | 8108460619.0 | 0
+
+[t=12.000] BUILDER_TICK builder=0
+[t=12.000] BUILDER_TICK builder=1
+[t=12.000] User A3 MEMPOOL_ADD idx=28 sent tx A3-tx7
+[t=12.500] User A3 MEMPOOL_ADD idx=29 sent tx A3-tx8
+[t=12.500] User A4 MEMPOOL_ADD idx=30 sent tx A4-tx4
+[t=13.000] User A3 MEMPOOL_ADD idx=31 sent tx A3-tx9
+[t=14.000] User A2 MEMPOOL_ADD idx=32 sent tx A2-tx6
+[t=14.000] User A4 MEMPOOL_ADD idx=33 sent tx A4-tx5
+[t=14.500] User A3 MEMPOOL_ADD idx=34 sent tx A3-tx10
+[t=15.000] BUILDER_TICK builder=0
+[t=15.000] BUILDER_TICK builder=1
+[t=15.000] User A1 MEMPOOL_ADD idx=35 sent tx A1-tx7
+[t=15.500] User A3 MEMPOOL_ADD idx=36 sent tx A3-tx11
+[t=15.500] User A4 MEMPOOL_ADD idx=37 sent tx A4-tx6
+[t=16.000] User A0 MEMPOOL_ADD idx=38 sent tx A0-tx4
+[t=16.000] User A1 MEMPOOL_ADD idx=39 sent tx A1-tx8
+[t=16.000] User A4 MEMPOOL_ADD idx=40 sent tx A4-tx7
+[t=16.500] User A2 MEMPOOL_ADD idx=41 sent tx A2-tx7
+[t=17.000] User A0 MEMPOOL_ADD idx=42 sent tx A0-tx5
+[t=17.000] User A2 MEMPOOL_ADD idx=43 sent tx A2-tx8
+[t=17.500] User A3 MEMPOOL_ADD idx=44 sent tx A3-tx12
+[t=18.000] BUILDER_TICK builder=0
+[t=18.000] BUILDER_TICK builder=1
+[t=18.500] User A0 MEMPOOL_ADD idx=45 sent tx A0-tx6
+[t=18.500] User A2 MEMPOOL_ADD idx=46 sent tx A2-tx9
+[t=18.500] User A3 MEMPOOL_ADD idx=47 sent tx A3-tx13
+[t=19.500] User A3 MEMPOOL_ADD idx=48 sent tx A3-tx14
+[t=20.000] User A0 MEMPOOL_ADD idx=49 sent tx A0-tx7
+[t=20.000] User A4 MEMPOOL_ADD idx=50 sent tx A4-tx8
+[t=20.500] User A2 MEMPOOL_ADD idx=51 sent tx A2-tx10
+[t=21.000] BUILDER_TICK builder=0
+[t=21.000] BUILDER_TICK builder=1
+[t=21.500] User A1 MEMPOOL_ADD idx=52 sent tx A1-tx9
+[t=22.000] User A3 MEMPOOL_ADD idx=53 sent tx A3-tx15
+[t=23.000] User A0 MEMPOOL_ADD idx=54 sent tx A0-tx8
+[t=23.000] User A2 MEMPOOL_ADD idx=55 sent tx A2-tx11
+[t=23.500] User A4 MEMPOOL_ADD idx=56 sent tx A4-tx9
+
+[t=24.000] VALIDATOR slot=1 builder id=1 block_len=33
+[t=24.000] SLOT_END slot=1
+[t=24.000] POOLS_END 
+pool | eth | usdc
+A | 14147020718779812371173 | 54007062600825
+B | 17147224715050995309144 | 54011087750851
+
+[t=24.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 99.0 | 2808272975.0 | 0
+A1 | 97.0 | 7383450145.0 | 0
+A2 | 97.0 | 8760107137.0 | 0
+A3 | 98.0 | 3356140745.0 | 0
+A4 | 98.0 | 6210177322.0 | 0
+
+[t=24.000] BUILDER_END 
+id | eth | usdc | nonce
+A0 | 99.0 | 2808272975.0 | 0
+A1 | 97.0 | 7383450145.0 | 0
+
+----------------------------------------------------------
+[t=24.000] BUILDER_TICK builder=0
+[t=24.000] BUILDER_TICK builder=1
+[t=24.000] User A1 MEMPOOL_ADD idx=57 sent tx A1-tx10
+[t=24.000] User A3 MEMPOOL_ADD idx=58 sent tx A3-tx16
+[t=24.000] User A4 MEMPOOL_ADD idx=59 sent tx A4-tx10
