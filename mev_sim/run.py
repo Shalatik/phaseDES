@@ -10,6 +10,7 @@ from mev_sim.objects.amm_pool import AMMPool
 from dataclasses import replace
 from mev_sim.objects.account import Account
 from mev_sim.utils.snapshots import format_pools, format_users
+from mev_sim.agents.builder_strategies import *
 
 def run_sim():
     logger = logging.getLogger("mev_sim.run")
@@ -45,9 +46,10 @@ def run_sim():
             logger.info(f"[t={engine.time:.3f}] SLOT_END slot={slot}")
             logger.info(f"[t={engine.time:.3f}] POOLS_END {format_pools(engine.state)}")
             logger.info(f"[t={engine.time:.3f}] USERS_END {format_users(engine.state, user_ids)}")
+            logger.info(f"----------------------------------------------------------")
             return
 
-        if event.type == USER_TICK:
+        if event.type == USER_TICK_EVENT:
             user_id = event.payload["user_id"]
             users[user_id].on_event(event, engine)
             return
@@ -57,14 +59,13 @@ def run_sim():
             
             idTx = engine.state.mempool_next_index
             tx_with_index = replace(tx, real_index=idTx)
-            engine.state.mempool_next_index += 1
             
-            engine.state.mempool[tx_with_index.txid] = tx_with_index
+            add_to_mempool(engine.state, tx_with_index)
             
             logger.info(f"[t={engine.time:.3f}] User {tx.sender} MEMPOOL_ADD idx={idTx} sent tx {tx_with_index.txid}")
             return
         
-        if event.type == BUILDER_TICK:
+        if event.type == BUILDER_TICK_EVENT:
             slot = int(engine.time // SLOT_LEN)
             builder_id = event.payload["builder_id"]
             logger.info(f"[t={engine.time:.3f}] BUILDER_TICK builder={builder_id}")
@@ -78,14 +79,14 @@ def run_sim():
 
 def init_agents(engine):
     users = {
-        u: User(user_id=u, tick=USER_TICK)
+        u: User(user_id=u, tick=USER_TICK_INTERVAL)
         for u in range(N_USERS)
     }
     
-    builders = {
-        b: Builder(mev_agent_id=b, tick=BUILDER_TICK)
-        for b in range(N_BUILDERS)
-    }
+    builders = {}
+    for b, cfg in enumerate(ACTIVE_BUILDERS):
+        strat = STRATEGY_REGISTRY[cfg["type"]](cfg)
+        builders[b] = Builder(mev_agent_id=b, tick=BUILDER_TICK_INTERVAL, strategy=strat)
 
     validators = {
         v: Validator(validator_id=v)
@@ -93,10 +94,10 @@ def init_agents(engine):
     }
 
     for u in users:
-        engine.schedule(0.0, USER_TICK, {"user_id": u})
+        engine.schedule(0.0, USER_TICK_EVENT, {"user_id": u})
 
     for b in builders:
-        engine.schedule(0.0, BUILDER_TICK, {"builder_id": b})
+        engine.schedule(0.0, BUILDER_TICK_EVENT, {"builder_id": b})
         
 
     for u in users.values():
@@ -114,3 +115,21 @@ def init_agents(engine):
         )
         
     return users, builders, validators
+
+def add_to_mempool(state, tx_with_index):
+    mempool = state.mempool
+
+    if len(mempool) >= MEMPOOL_CAPACITY:
+        lowest_fee_tx = min(
+            mempool.values(),
+            key=lambda tx: (tx.max_fee, tx.txid)
+        )
+
+        if tx_with_index.max_fee > lowest_fee_tx.max_fee:
+            del mempool[lowest_fee_tx.txid]
+            mempool[tx_with_index.txid] = tx_with_index
+    else:
+        mempool[tx_with_index.txid] = tx_with_index
+    state.mempool_next_index += 1
+
+

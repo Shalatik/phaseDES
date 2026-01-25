@@ -71,14 +71,14 @@ class Validator:
 		target_token = str(tx.payload['token'])
 		amm_pool = engine.state.amm_pool_a if tx.payload["amm_pool"] == AMM_POOL_A_NAME else engine.state.amm_pool_b
 
-		# if target_token == ETH_TO_USDC and account.eth_wei < target_amount:
-		# 	tx.status = "reverted_insufficient_funds"
-		# 	return tx.status
-		# if target_token == USDC_TO_ETH and account.usdc_units < target_amount:
-		# 	tx.status = "reverted_insufficient_funds"
-		# 	return tx.status
+		if target_token == ETH_TO_USDC and account.eth_wei < target_amount:
+			tx.status = "reverted_insufficient_funds"
+			return tx.status
+		if target_token == USDC_TO_ETH and account.usdc_units < target_amount:
+			tx.status = "reverted_insufficient_funds"
+			return tx.status
 
-		success, out = amm_pool.execute_swap(target_amount, target_token, 0)
+		success, out = amm_pool.execute_swap(target_amount, target_token)
 
 		if success:
 			if target_token == ETH_TO_USDC:

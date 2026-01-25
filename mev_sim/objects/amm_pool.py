@@ -15,12 +15,9 @@ class AMMPool:
             "usdc": self.usdc_reserve,
         }
 
-    def execute_swap(self, amount_in, target_token, min_out) -> int:
+    def execute_swap(self, amount_in, target_token) -> int:
         amount_out = self.calculate_out(amount_in, target_token)
 				
-        if amount_out < min_out:
-            return False, 0 # REVERT
-        
         if target_token == ETH_TO_USDC:
             self.eth_reserve += amount_in
             self.usdc_reserve -= amount_out

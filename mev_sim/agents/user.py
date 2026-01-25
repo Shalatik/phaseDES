@@ -15,7 +15,7 @@ class User:
         self.rng = random.Random(SEED + user_id)
 
     def on_event(self, event, engine):
-        if event.type == USER_TICK:
+        if event.type == USER_TICK_EVENT:
             # rozhodnutí: poslat tx?
             if self.rng.random() < P_SEND:
                 fee = engine.state.burn_fee * 1.5
@@ -44,11 +44,10 @@ class User:
                         "amount": amount,
                         "token": target_token,
                         "amm_pool": target_amm_pool['name'],
-                        "min_out": 0.99, #int(expected_out * 0.99), #TODO:
                     },
                 )
                 self.nonce += 1
                 engine.schedule(engine.time, SEND_TX, {"tx": tx})
 
             # vždy naplánuj další tick
-            engine.schedule(engine.time + self.tick, USER_TICK, {"user_id": self.user_id})
+            engine.schedule(engine.time + self.tick, USER_TICK_EVENT, {"user_id": self.user_id})

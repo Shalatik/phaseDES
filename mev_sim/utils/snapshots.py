@@ -9,7 +9,7 @@ def format_pools(state) -> str:
         f"A | {a['eth']} | {a['usdc']}",
         f"B | {b['eth']} | {b['usdc']}",
     ]
-    return "\n".join(lines) + "\n"
+    return "\n"+ "\n".join(lines) + "\n"
 
 
 def format_users(state, user_ids) -> str:
@@ -19,4 +19,4 @@ def format_users(state, user_ids) -> str:
         lines.append(
             f"{uid} | {acc.eth_wei // ETH_TO_WEI} | {acc.usdc_units} | {acc.nonce}"
         )
-    return "\n".join(lines) + "\n"
+    return "\n"+"\n".join(lines) + "\n"
