@@ -10,5 +10,4 @@ class Block:
     txs: List[Tx] = field(default_factory=list)
 
     def score(self) -> float:
-        # placeholder: později fee/profit
         return float(len(self.txs))

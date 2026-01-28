@@ -32,7 +32,7 @@ def run_sim():
     users, builders, validators = init_agents(engine)
         
     user_ids = [users[u].id for u in users] 
-    builder_ids = [users[b].id for b in builders]    
+    builder_ids = [builders[b].id for b in builders]    
        
         
     def handler(event, engine):

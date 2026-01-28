@@ -6,155 +6,1695 @@ B | 17143000000000000000000 | 54024334000000
 
 [t=0.000] USERS_START 
 id | eth | usdc | nonce
-A0 | 100.0 | 100000.0 | 0
-A1 | 100.0 | 100000.0 | 0
-A2 | 100.0 | 100000.0 | 0
-A3 | 100.0 | 100000.0 | 0
-A4 | 100.0 | 100000.0 | 0
+A0 | 100 | 100000000000 | 0
+A1 | 100 | 100000000000 | 0
+A2 | 100 | 100000000000 | 0
+A3 | 100 | 100000000000 | 0
+A4 | 100 | 100000000000 | 0
+A5 | 100 | 100000000000 | 0
+A6 | 100 | 100000000000 | 0
+A7 | 100 | 100000000000 | 0
+A8 | 100 | 100000000000 | 0
+A9 | 100 | 100000000000 | 0
+A10 | 100 | 100000000000 | 0
+A11 | 100 | 100000000000 | 0
+A12 | 100 | 100000000000 | 0
+A13 | 100 | 100000000000 | 0
+A14 | 100 | 100000000000 | 0
+A15 | 100 | 100000000000 | 0
+A16 | 100 | 100000000000 | 0
+A17 | 100 | 100000000000 | 0
+A18 | 100 | 100000000000 | 0
+A19 | 100 | 100000000000 | 0
 
 [t=0.000] BUILDER_START 
 id | eth | usdc | nonce
-A0 | 100.0 | 100000.0 | 0
-A1 | 100.0 | 100000.0 | 0
+0 | 300 | 300000000000 | 0
 
 [t=0.000] BUILDER_TICK builder=0
-[t=0.000] BUILDER_TICK builder=1
-[t=0.500] User A1 MEMPOOL_ADD idx=0 sent tx A1-tx0
-[t=1.000] User A2 MEMPOOL_ADD idx=1 sent tx A2-tx0
-[t=1.000] User A3 MEMPOOL_ADD idx=2 sent tx A3-tx0
-[t=1.500] User A1 MEMPOOL_ADD idx=3 sent tx A1-tx1
-[t=2.000] User A0 MEMPOOL_ADD idx=4 sent tx A0-tx0
-[t=2.000] User A1 MEMPOOL_ADD idx=5 sent tx A1-tx2
-[t=2.000] User A3 MEMPOOL_ADD idx=6 sent tx A3-tx1
-[t=2.500] User A1 MEMPOOL_ADD idx=7 sent tx A1-tx3
+[t=0.000] User A8 MEMPOOL_ADD idx=0 sent tx A8-tx0
+[t=0.000] User A12 MEMPOOL_ADD idx=1 sent tx A12-tx0
+[t=0.000] User A15 MEMPOOL_ADD idx=2 sent tx A15-tx0
+[t=0.500] User A1 MEMPOOL_ADD idx=3 sent tx A1-tx0
+[t=0.500] User A9 MEMPOOL_ADD idx=4 sent tx A9-tx0
+[t=0.500] User A16 MEMPOOL_ADD idx=5 sent tx A16-tx0
+[t=1.000] User A1 MEMPOOL_ADD idx=6 sent tx A1-tx1
+[t=1.000] User A2 MEMPOOL_ADD idx=7 sent tx A2-tx0
+[t=1.000] User A3 MEMPOOL_ADD idx=8 sent tx A3-tx0
+[t=1.000] User A18 MEMPOOL_ADD idx=9 sent tx A18-tx0
+[t=1.500] User A1 MEMPOOL_ADD idx=10 sent tx A1-tx2
+[t=1.500] User A3 MEMPOOL_ADD idx=11 sent tx A3-tx1
+[t=1.500] User A6 MEMPOOL_ADD idx=12 sent tx A6-tx0
+[t=1.500] User A17 MEMPOOL_ADD idx=13 sent tx A17-tx0
+[t=2.000] User A0 MEMPOOL_ADD idx=14 sent tx A0-tx0
+[t=2.000] User A7 MEMPOOL_ADD idx=15 sent tx A7-tx0
+[t=2.000] User A17 MEMPOOL_ADD idx=16 sent tx A17-tx1
+[t=2.000] User A18 MEMPOOL_ADD idx=17 sent tx A18-tx1
+[t=2.500] User A7 MEMPOOL_ADD idx=18 sent tx A7-tx1
+[t=2.500] User A17 MEMPOOL_ADD idx=19 sent tx A17-tx2
 [t=3.000] BUILDER_TICK builder=0
-[t=3.000] BUILDER_TICK builder=1
-[t=3.500] User A4 MEMPOOL_ADD idx=8 sent tx A4-tx0
-[t=4.500] User A1 MEMPOOL_ADD idx=9 sent tx A1-tx4
-[t=4.500] User A2 MEMPOOL_ADD idx=10 sent tx A2-tx1
-[t=4.500] User A3 MEMPOOL_ADD idx=11 sent tx A3-tx2
-[t=5.000] User A1 MEMPOOL_ADD idx=12 sent tx A1-tx5
-[t=5.000] User A2 MEMPOOL_ADD idx=13 sent tx A2-tx2
-[t=5.000] User A4 MEMPOOL_ADD idx=14 sent tx A4-tx1
+[t=3.000] User A5 MEMPOOL_ADD idx=20 sent tx A5-tx0
+[t=3.000] User A15 MEMPOOL_ADD idx=21 sent tx A15-tx1
+[t=3.000] User A19 MEMPOOL_ADD idx=22 sent tx A19-tx0
+[t=3.500] User A3 MEMPOOL_ADD idx=23 sent tx A3-tx2
+[t=3.500] User A4 MEMPOOL_ADD idx=24 sent tx A4-tx0
+[t=3.500] User A11 MEMPOOL_ADD idx=25 sent tx A11-tx0
+[t=3.500] User A13 MEMPOOL_ADD idx=26 sent tx A13-tx0
+[t=3.500] User A17 MEMPOOL_ADD idx=27 sent tx A17-tx3
+[t=3.500] User A18 MEMPOOL_ADD idx=28 sent tx A18-tx2
+[t=4.000] User A2 MEMPOOL_ADD idx=29 sent tx A2-tx1
+[t=4.000] User A5 MEMPOOL_ADD idx=30 sent tx A5-tx1
+[t=4.000] User A6 MEMPOOL_ADD idx=31 sent tx A6-tx1
+[t=4.000] User A7 MEMPOOL_ADD idx=32 sent tx A7-tx2
+[t=4.000] User A8 MEMPOOL_ADD idx=33 sent tx A8-tx1
+[t=4.000] User A10 MEMPOOL_ADD idx=34 sent tx A10-tx0
+[t=4.000] User A13 MEMPOOL_ADD idx=35 sent tx A13-tx1
+[t=4.000] User A19 MEMPOOL_ADD idx=36 sent tx A19-tx1
+[t=4.500] User A1 MEMPOOL_ADD idx=37 sent tx A1-tx3
+[t=4.500] User A4 MEMPOOL_ADD idx=38 sent tx A4-tx1
+[t=4.500] User A13 MEMPOOL_ADD idx=39 sent tx A13-tx2
+[t=4.500] User A14 MEMPOOL_ADD idx=40 sent tx A14-tx0
+[t=4.500] User A15 MEMPOOL_ADD idx=41 sent tx A15-tx2
+[t=5.000] User A6 MEMPOOL_ADD idx=42 sent tx A6-tx2
+[t=5.000] User A15 MEMPOOL_ADD idx=43 sent tx A15-tx3
+[t=5.000] User A18 MEMPOOL_ADD idx=44 sent tx A18-tx3
+[t=5.500] User A6 MEMPOOL_ADD idx=45 sent tx A6-tx3
+[t=5.500] User A8 MEMPOOL_ADD idx=46 sent tx A8-tx2
+[t=5.500] User A19 MEMPOOL_ADD idx=47 sent tx A19-tx2
 [t=6.000] BUILDER_TICK builder=0
-[t=6.000] BUILDER_TICK builder=1
-[t=6.000] User A2 MEMPOOL_ADD idx=15 sent tx A2-tx3
-[t=6.500] User A0 MEMPOOL_ADD idx=16 sent tx A0-tx1
-[t=7.500] User A1 MEMPOOL_ADD idx=17 sent tx A1-tx6
-[t=7.500] User A3 MEMPOOL_ADD idx=18 sent tx A3-tx3
-[t=8.000] User A4 MEMPOOL_ADD idx=19 sent tx A4-tx2
-[t=8.500] User A3 MEMPOOL_ADD idx=20 sent tx A3-tx4
+[t=6.000] User A0 MEMPOOL_ADD idx=48 sent tx A0-tx1
+[t=6.000] User A1 MEMPOOL_ADD idx=49 sent tx A1-tx4
+[t=6.000] User A3 MEMPOOL_ADD idx=50 sent tx A3-tx3
+[t=6.000] User A5 MEMPOOL_ADD idx=51 sent tx A5-tx2
+[t=6.000] User A8 MEMPOOL_ADD idx=52 sent tx A8-tx3
+[t=6.000] User A13 MEMPOOL_ADD idx=53 sent tx A13-tx3
+[t=6.000] User A15 MEMPOOL_ADD idx=54 sent tx A15-tx4
+[t=6.500] User A1 MEMPOOL_ADD idx=55 sent tx A1-tx5
+[t=6.500] User A2 MEMPOOL_ADD idx=56 sent tx A2-tx2
+[t=6.500] User A3 MEMPOOL_ADD idx=57 sent tx A3-tx4
+[t=6.500] User A16 MEMPOOL_ADD idx=58 sent tx A16-tx1
+[t=6.500] User A19 MEMPOOL_ADD idx=59 sent tx A19-tx3
+[t=7.000] User A3 MEMPOOL_ADD idx=60 sent tx A3-tx5
+[t=7.000] User A4 MEMPOOL_ADD idx=61 sent tx A4-tx2
+[t=7.000] User A5 MEMPOOL_ADD idx=62 sent tx A5-tx3
+[t=7.000] User A6 MEMPOOL_ADD idx=63 sent tx A6-tx4
+[t=7.000] User A11 MEMPOOL_ADD idx=64 sent tx A11-tx1
+[t=7.500] User A4 MEMPOOL_ADD idx=65 sent tx A4-tx3
+[t=7.500] User A6 MEMPOOL_ADD idx=66 sent tx A6-tx5
+[t=7.500] User A17 MEMPOOL_ADD idx=67 sent tx A17-tx4
+[t=7.500] User A19 MEMPOOL_ADD idx=68 sent tx A19-tx4
+[t=8.000] User A0 MEMPOOL_ADD idx=69 sent tx A0-tx2
+[t=8.000] User A3 MEMPOOL_ADD idx=70 sent tx A3-tx6
+[t=8.000] User A10 MEMPOOL_ADD idx=71 sent tx A10-tx1
+[t=8.000] User A15 MEMPOOL_ADD idx=72 sent tx A15-tx5
+[t=8.000] User A19 MEMPOOL_ADD idx=73 sent tx A19-tx5
+[t=8.500] User A0 MEMPOOL_ADD idx=74 sent tx A0-tx3
+[t=8.500] User A3 MEMPOOL_ADD idx=75 sent tx A3-tx7
+[t=8.500] User A17 MEMPOOL_ADD idx=76 sent tx A17-tx5
 [t=9.000] BUILDER_TICK builder=0
-[t=9.000] BUILDER_TICK builder=1
-[t=9.000] User A0 MEMPOOL_ADD idx=21 sent tx A0-tx2
-[t=9.000] User A4 MEMPOOL_ADD idx=22 sent tx A4-tx3
-[t=9.500] User A0 MEMPOOL_ADD idx=23 sent tx A0-tx3
-[t=9.500] User A3 MEMPOOL_ADD idx=24 sent tx A3-tx5
-[t=11.000] User A2 MEMPOOL_ADD idx=25 sent tx A2-tx4
-[t=11.000] User A3 MEMPOOL_ADD idx=26 sent tx A3-tx6
-[t=11.500] User A2 MEMPOOL_ADD idx=27 sent tx A2-tx5
+[t=9.000] User A3 MEMPOOL_ADD idx=77 sent tx A3-tx8
+[t=9.000] User A17 MEMPOOL_ADD idx=78 sent tx A17-tx6
+[t=9.000] User A18 MEMPOOL_ADD idx=79 sent tx A18-tx4
+[t=9.500] User A8 MEMPOOL_ADD idx=80 sent tx A8-tx4
+[t=10.000] User A14 MEMPOOL_ADD idx=81 sent tx A14-tx1
+[t=10.500] User A4 MEMPOOL_ADD idx=82 sent tx A4-tx4
+[t=10.500] User A6 MEMPOOL_ADD idx=83 sent tx A6-tx6
+[t=10.500] User A9 MEMPOOL_ADD idx=84 sent tx A9-tx1
+[t=11.000] User A2 MEMPOOL_ADD idx=85 sent tx A2-tx3
+[t=11.000] User A8 MEMPOOL_ADD idx=86 sent tx A8-tx5
+[t=11.000] User A11 MEMPOOL_ADD idx=87 sent tx A11-tx2
+[t=11.000] User A12 MEMPOOL_ADD idx=88 sent tx A12-tx1
+[t=11.000] User A19 MEMPOOL_ADD idx=89 sent tx A19-tx6
+[t=11.500] User A3 MEMPOOL_ADD idx=90 sent tx A3-tx9
+[t=11.500] User A4 MEMPOOL_ADD idx=91 sent tx A4-tx5
+[t=11.500] User A7 MEMPOOL_ADD idx=92 sent tx A7-tx3
+[t=11.500] User A8 MEMPOOL_ADD idx=93 sent tx A8-tx6
+[t=11.500] User A13 MEMPOOL_ADD idx=94 sent tx A13-tx4
 
-[t=12.000] VALIDATOR slot=0 builder id=0 block_len=21
+[t=12.000] VALIDATOR slot=0 builder id=0 block_len=79
 [t=12.000] SLOT_END slot=0
 [t=12.000] POOLS_END 
 pool | eth | usdc
-A | 14145696242011913884202 | 54012079439035
-B | 17145890234792422825057 | 54015258707877
+A | 14160749813037530418788 | 53954846793516
+B | 17139652890079483198789 | 54035091124694
 
 [t=12.000] USERS_END 
 id | eth | usdc | nonce
-A0 | 99.0 | 2121464984.0 | 0
-A1 | 97.0 | 8108460619.0 | 0
-A2 | 98.0 | 4884763997.0 | 0
-A3 | 98.0 | 3811706575.0 | 0
-A4 | 99.0 | 403956913.0 | 0
+A0 | 98.0 | 104669809720 | 0
+A1 | 98.0 | 105591370467 | 0
+A2 | 99.0 | 101451374926 | 0
+A3 | 99.0 | 103438831102 | 0
+A4 | 99.0 | 103012780479 | 0
+A5 | 99.0 | 102307220934 | 0
+A6 | 98.0 | 106973470579 | 0
+A7 | 98.0 | 105096082430 | 0
+A8 | 100.0 | 99313740113 | 0
+A9 | 99.0 | 103100395961 | 0
+A10 | 99.0 | 100243609680 | 0
+A11 | 99.0 | 102686185556 | 0
+A12 | 99.0 | 100622524282 | 0
+A13 | 99.0 | 102623367217 | 0
+A14 | 100.0 | 99896752201 | 0
+A15 | 99.0 | 101699998016 | 0
+A16 | 100.0 | 99505065151 | 0
+A17 | 98.0 | 106858040498 | 0
+A18 | 99.0 | 100446490051 | 0
+A19 | 99.0 | 101092732503 | 0
 
 [t=12.000] BUILDER_END 
 id | eth | usdc | nonce
-A0 | 99.0 | 2121464984.0 | 0
-A1 | 97.0 | 8108460619.0 | 0
+0 | 299.0 | 306100239924 | 0
 
 ----------------------------------------------------------
 [t=12.000] SLOT_START slot=1
 [t=12.000] POOLS_START 
 pool | eth | usdc
-A | 14145696242011913884202 | 54012079439035
-B | 17145890234792422825057 | 54015258707877
+A | 14160749813037530418788 | 53954846793516
+B | 17139652890079483198789 | 54035091124694
 
 [t=12.000] USERS_START 
 id | eth | usdc | nonce
-A0 | 99.0 | 2121464984.0 | 0
-A1 | 97.0 | 8108460619.0 | 0
-A2 | 98.0 | 4884763997.0 | 0
-A3 | 98.0 | 3811706575.0 | 0
-A4 | 99.0 | 403956913.0 | 0
+A0 | 98.0 | 104669809720 | 0
+A1 | 98.0 | 105591370467 | 0
+A2 | 99.0 | 101451374926 | 0
+A3 | 99.0 | 103438831102 | 0
+A4 | 99.0 | 103012780479 | 0
+A5 | 99.0 | 102307220934 | 0
+A6 | 98.0 | 106973470579 | 0
+A7 | 98.0 | 105096082430 | 0
+A8 | 100.0 | 99313740113 | 0
+A9 | 99.0 | 103100395961 | 0
+A10 | 99.0 | 100243609680 | 0
+A11 | 99.0 | 102686185556 | 0
+A12 | 99.0 | 100622524282 | 0
+A13 | 99.0 | 102623367217 | 0
+A14 | 100.0 | 99896752201 | 0
+A15 | 99.0 | 101699998016 | 0
+A16 | 100.0 | 99505065151 | 0
+A17 | 98.0 | 106858040498 | 0
+A18 | 99.0 | 100446490051 | 0
+A19 | 99.0 | 101092732503 | 0
 
 [t=12.000] BUILDER_START 
 id | eth | usdc | nonce
-A0 | 99.0 | 2121464984.0 | 0
-A1 | 97.0 | 8108460619.0 | 0
+0 | 299.0 | 306100239924 | 0
 
 [t=12.000] BUILDER_TICK builder=0
-[t=12.000] BUILDER_TICK builder=1
-[t=12.000] User A3 MEMPOOL_ADD idx=28 sent tx A3-tx7
-[t=12.500] User A3 MEMPOOL_ADD idx=29 sent tx A3-tx8
-[t=12.500] User A4 MEMPOOL_ADD idx=30 sent tx A4-tx4
-[t=13.000] User A3 MEMPOOL_ADD idx=31 sent tx A3-tx9
-[t=14.000] User A2 MEMPOOL_ADD idx=32 sent tx A2-tx6
-[t=14.000] User A4 MEMPOOL_ADD idx=33 sent tx A4-tx5
-[t=14.500] User A3 MEMPOOL_ADD idx=34 sent tx A3-tx10
+[t=12.000] User A3 MEMPOOL_ADD idx=95 sent tx A3-tx10
+[t=12.000] User A14 MEMPOOL_ADD idx=96 sent tx A14-tx2
+[t=12.000] User A15 MEMPOOL_ADD idx=97 sent tx A15-tx6
+[t=12.000] User A18 MEMPOOL_ADD idx=98 sent tx A18-tx5
+[t=12.500] User A4 MEMPOOL_ADD idx=99 sent tx A4-tx6
+[t=12.500] User A8 MEMPOOL_ADD idx=100 sent tx A8-tx7
+[t=12.500] User A10 MEMPOOL_ADD idx=101 sent tx A10-tx2
+[t=13.000] User A6 MEMPOOL_ADD idx=102 sent tx A6-tx7
+[t=13.000] User A7 MEMPOOL_ADD idx=103 sent tx A7-tx4
+[t=13.000] User A11 MEMPOOL_ADD idx=104 sent tx A11-tx3
+[t=13.000] User A13 MEMPOOL_ADD idx=105 sent tx A13-tx5
+[t=13.500] User A1 MEMPOOL_ADD idx=106 sent tx A1-tx6
+[t=13.500] User A3 MEMPOOL_ADD idx=107 sent tx A3-tx11
+[t=13.500] User A4 MEMPOOL_ADD idx=108 sent tx A4-tx7
+[t=13.500] User A5 MEMPOOL_ADD idx=109 sent tx A5-tx4
+[t=13.500] User A10 MEMPOOL_ADD idx=110 sent tx A10-tx3
+[t=13.500] User A14 MEMPOOL_ADD idx=111 sent tx A14-tx3
+[t=13.500] User A17 MEMPOOL_ADD idx=112 sent tx A17-tx7
+[t=13.500] User A18 MEMPOOL_ADD idx=113 sent tx A18-tx6
+[t=14.000] User A0 MEMPOOL_ADD idx=114 sent tx A0-tx4
+[t=14.000] User A1 MEMPOOL_ADD idx=115 sent tx A1-tx7
+[t=14.000] User A3 MEMPOOL_ADD idx=116 sent tx A3-tx12
+[t=14.000] User A6 MEMPOOL_ADD idx=117 sent tx A6-tx8
+[t=14.000] User A9 MEMPOOL_ADD idx=118 sent tx A9-tx2
+[t=14.000] User A12 MEMPOOL_ADD idx=119 sent tx A12-tx2
+[t=14.000] User A16 MEMPOOL_ADD idx=120 sent tx A16-tx2
+[t=14.500] User A0 MEMPOOL_ADD idx=121 sent tx A0-tx5
+[t=14.500] User A3 MEMPOOL_ADD idx=122 sent tx A3-tx13
+[t=14.500] User A10 MEMPOOL_ADD idx=123 sent tx A10-tx4
 [t=15.000] BUILDER_TICK builder=0
-[t=15.000] BUILDER_TICK builder=1
-[t=15.000] User A1 MEMPOOL_ADD idx=35 sent tx A1-tx7
-[t=15.500] User A3 MEMPOOL_ADD idx=36 sent tx A3-tx11
-[t=15.500] User A4 MEMPOOL_ADD idx=37 sent tx A4-tx6
-[t=16.000] User A0 MEMPOOL_ADD idx=38 sent tx A0-tx4
-[t=16.000] User A1 MEMPOOL_ADD idx=39 sent tx A1-tx8
-[t=16.000] User A4 MEMPOOL_ADD idx=40 sent tx A4-tx7
-[t=16.500] User A2 MEMPOOL_ADD idx=41 sent tx A2-tx7
-[t=17.000] User A0 MEMPOOL_ADD idx=42 sent tx A0-tx5
-[t=17.000] User A2 MEMPOOL_ADD idx=43 sent tx A2-tx8
-[t=17.500] User A3 MEMPOOL_ADD idx=44 sent tx A3-tx12
+[t=15.000] User A2 MEMPOOL_ADD idx=124 sent tx A2-tx4
+[t=15.000] User A5 MEMPOOL_ADD idx=125 sent tx A5-tx5
+[t=15.000] User A12 MEMPOOL_ADD idx=126 sent tx A12-tx3
+[t=15.000] User A13 MEMPOOL_ADD idx=127 sent tx A13-tx6
+[t=15.000] User A14 MEMPOOL_ADD idx=128 sent tx A14-tx4
+[t=15.000] User A16 MEMPOOL_ADD idx=129 sent tx A16-tx3
+[t=15.000] User A19 MEMPOOL_ADD idx=130 sent tx A19-tx7
+[t=15.500] User A0 MEMPOOL_ADD idx=131 sent tx A0-tx6
+[t=15.500] User A8 MEMPOOL_ADD idx=132 sent tx A8-tx8
+[t=15.500] User A13 MEMPOOL_ADD idx=133 sent tx A13-tx7
+[t=16.000] User A4 MEMPOOL_ADD idx=134 sent tx A4-tx8
+[t=16.000] User A5 MEMPOOL_ADD idx=135 sent tx A5-tx6
+[t=16.000] User A6 MEMPOOL_ADD idx=136 sent tx A6-tx9
+[t=16.000] User A7 MEMPOOL_ADD idx=137 sent tx A7-tx5
+[t=16.000] User A8 MEMPOOL_ADD idx=138 sent tx A8-tx9
+[t=16.000] User A12 MEMPOOL_ADD idx=139 sent tx A12-tx4
+[t=16.000] User A15 MEMPOOL_ADD idx=140 sent tx A15-tx7
+[t=16.000] User A17 MEMPOOL_ADD idx=141 sent tx A17-tx8
+[t=16.500] User A0 MEMPOOL_ADD idx=142 sent tx A0-tx7
+[t=16.500] User A3 MEMPOOL_ADD idx=143 sent tx A3-tx14
+[t=16.500] User A9 MEMPOOL_ADD idx=144 sent tx A9-tx3
+[t=16.500] User A19 MEMPOOL_ADD idx=145 sent tx A19-tx8
+[t=17.000] User A2 MEMPOOL_ADD idx=146 sent tx A2-tx5
+[t=17.000] User A7 MEMPOOL_ADD idx=147 sent tx A7-tx6
+[t=17.000] User A10 MEMPOOL_ADD idx=148 sent tx A10-tx5
+[t=17.000] User A13 MEMPOOL_ADD idx=149 sent tx A13-tx8
+[t=17.500] User A13 MEMPOOL_ADD idx=150 sent tx A13-tx9
 [t=18.000] BUILDER_TICK builder=0
-[t=18.000] BUILDER_TICK builder=1
-[t=18.500] User A0 MEMPOOL_ADD idx=45 sent tx A0-tx6
-[t=18.500] User A2 MEMPOOL_ADD idx=46 sent tx A2-tx9
-[t=18.500] User A3 MEMPOOL_ADD idx=47 sent tx A3-tx13
-[t=19.500] User A3 MEMPOOL_ADD idx=48 sent tx A3-tx14
-[t=20.000] User A0 MEMPOOL_ADD idx=49 sent tx A0-tx7
-[t=20.000] User A4 MEMPOOL_ADD idx=50 sent tx A4-tx8
-[t=20.500] User A2 MEMPOOL_ADD idx=51 sent tx A2-tx10
+[t=18.000] User A3 MEMPOOL_ADD idx=151 sent tx A3-tx15
+[t=18.000] User A5 MEMPOOL_ADD idx=152 sent tx A5-tx7
+[t=18.000] User A6 MEMPOOL_ADD idx=153 sent tx A6-tx10
+[t=18.000] User A7 MEMPOOL_ADD idx=154 sent tx A7-tx7
+[t=18.000] User A12 MEMPOOL_ADD idx=155 sent tx A12-tx5
+[t=18.500] User A5 MEMPOOL_ADD idx=156 sent tx A5-tx8
+[t=18.500] User A7 MEMPOOL_ADD idx=157 sent tx A7-tx8
+[t=18.500] User A9 MEMPOOL_ADD idx=158 sent tx A9-tx4
+[t=18.500] User A13 MEMPOOL_ADD idx=159 sent tx A13-tx10
+[t=18.500] User A14 MEMPOOL_ADD idx=160 sent tx A14-tx5
+[t=19.000] User A0 MEMPOOL_ADD idx=161 sent tx A0-tx8
+[t=19.000] User A1 MEMPOOL_ADD idx=162 sent tx A1-tx8
+[t=19.000] User A4 MEMPOOL_ADD idx=163 sent tx A4-tx9
+[t=19.000] User A5 MEMPOOL_ADD idx=164 sent tx A5-tx9
+[t=19.000] User A11 MEMPOOL_ADD idx=165 sent tx A11-tx4
+[t=19.500] User A14 MEMPOOL_ADD idx=166 sent tx A14-tx6
+[t=19.500] User A18 MEMPOOL_ADD idx=167 sent tx A18-tx7
+[t=20.000] User A2 MEMPOOL_ADD idx=168 sent tx A2-tx6
+[t=20.000] User A6 MEMPOOL_ADD idx=169 sent tx A6-tx11
+[t=20.000] User A15 MEMPOOL_ADD idx=170 sent tx A15-tx8
+[t=20.500] User A8 MEMPOOL_ADD idx=171 sent tx A8-tx10
+[t=20.500] User A13 MEMPOOL_ADD idx=172 sent tx A13-tx11
+[t=20.500] User A18 MEMPOOL_ADD idx=173 sent tx A18-tx8
 [t=21.000] BUILDER_TICK builder=0
-[t=21.000] BUILDER_TICK builder=1
-[t=21.500] User A1 MEMPOOL_ADD idx=52 sent tx A1-tx9
-[t=22.000] User A3 MEMPOOL_ADD idx=53 sent tx A3-tx15
-[t=23.000] User A0 MEMPOOL_ADD idx=54 sent tx A0-tx8
-[t=23.000] User A2 MEMPOOL_ADD idx=55 sent tx A2-tx11
-[t=23.500] User A4 MEMPOOL_ADD idx=56 sent tx A4-tx9
+[t=21.000] User A1 MEMPOOL_ADD idx=174 sent tx A1-tx9
+[t=21.000] User A6 MEMPOOL_ADD idx=175 sent tx A6-tx12
+[t=21.000] User A7 MEMPOOL_ADD idx=176 sent tx A7-tx9
+[t=21.000] User A8 MEMPOOL_ADD idx=177 sent tx A8-tx11
+[t=21.000] User A16 MEMPOOL_ADD idx=178 sent tx A16-tx4
+[t=21.000] User A18 MEMPOOL_ADD idx=179 sent tx A18-tx9
+[t=21.500] User A2 MEMPOOL_ADD idx=180 sent tx A2-tx7
+[t=21.500] User A6 MEMPOOL_ADD idx=181 sent tx A6-tx13
+[t=21.500] User A9 MEMPOOL_ADD idx=182 sent tx A9-tx5
+[t=21.500] User A15 MEMPOOL_ADD idx=183 sent tx A15-tx9
+[t=22.000] User A1 MEMPOOL_ADD idx=184 sent tx A1-tx10
+[t=22.000] User A14 MEMPOOL_ADD idx=185 sent tx A14-tx7
+[t=22.000] User A17 MEMPOOL_ADD idx=186 sent tx A17-tx9
+[t=22.000] User A19 MEMPOOL_ADD idx=187 sent tx A19-tx9
+[t=22.500] User A6 MEMPOOL_ADD idx=188 sent tx A6-tx14
+[t=22.500] User A10 MEMPOOL_ADD idx=189 sent tx A10-tx6
+[t=22.500] User A14 MEMPOOL_ADD idx=190 sent tx A14-tx8
+[t=23.000] User A8 MEMPOOL_ADD idx=191 sent tx A8-tx12
+[t=23.000] User A11 MEMPOOL_ADD idx=192 sent tx A11-tx5
+[t=23.000] User A12 MEMPOOL_ADD idx=193 sent tx A12-tx6
+[t=23.500] User A2 MEMPOOL_ADD idx=194 sent tx A2-tx8
+[t=23.500] User A10 MEMPOOL_ADD idx=195 sent tx A10-tx7
+[t=23.500] User A12 MEMPOOL_ADD idx=196 sent tx A12-tx7
+[t=23.500] User A16 MEMPOOL_ADD idx=197 sent tx A16-tx5
+[t=23.500] User A17 MEMPOOL_ADD idx=198 sent tx A17-tx10
 
-[t=24.000] VALIDATOR slot=1 builder id=1 block_len=33
+[t=24.000] VALIDATOR slot=1 builder id=0 block_len=99
 [t=24.000] SLOT_END slot=1
 [t=24.000] POOLS_END 
 pool | eth | usdc
-A | 14147020718779812371173 | 54007062600825
-B | 17147224715050995309144 | 54011087750851
+A | 14178972953672279808030 | 53885774710208
+B | 17141662441118895768446 | 54029019226184
 
 [t=24.000] USERS_END 
 id | eth | usdc | nonce
-A0 | 99.0 | 2808272975.0 | 0
-A1 | 97.0 | 7383450145.0 | 0
-A2 | 97.0 | 8760107137.0 | 0
-A3 | 98.0 | 3356140745.0 | 0
-A4 | 98.0 | 6210177322.0 | 0
+A0 | 97.0 | 107422909639 | 0
+A1 | 98.0 | 103873264054 | 0
+A2 | 98.0 | 104228393131 | 0
+A3 | 97.0 | 107889084537 | 0
+A4 | 98.0 | 104770876057 | 0
+A5 | 98.0 | 106380002856 | 0
+A6 | 96.0 | 113420077858 | 0
+A7 | 99.0 | 103445466974 | 0
+A8 | 97.0 | 108064368474 | 0
+A9 | 96.0 | 110968976924 | 0
+A10 | 98.0 | 104133598380 | 0
+A11 | 97.0 | 108116632269 | 0
+A12 | 99.0 | 102092787609 | 0
+A13 | 96.0 | 110922996848 | 0
+A14 | 98.0 | 104479780053 | 0
+A15 | 98.0 | 104021397180 | 0
+A16 | 100.0 | 98802725136 | 0
+A17 | 97.0 | 108382703327 | 0
+A18 | 98.0 | 103876164403 | 0
+A19 | 98.0 | 104364815923 | 0
 
 [t=24.000] BUILDER_END 
 id | eth | usdc | nonce
-A0 | 99.0 | 2808272975.0 | 0
-A1 | 97.0 | 7383450145.0 | 0
+0 | 299.0 | 312217041976 | 0
 
 ----------------------------------------------------------
+[t=24.000] SLOT_START slot=2
+[t=24.000] POOLS_START 
+pool | eth | usdc
+A | 14178972953672279808030 | 53885774710208
+B | 17141662441118895768446 | 54029019226184
+
+[t=24.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 97.0 | 107422909639 | 0
+A1 | 98.0 | 103873264054 | 0
+A2 | 98.0 | 104228393131 | 0
+A3 | 97.0 | 107889084537 | 0
+A4 | 98.0 | 104770876057 | 0
+A5 | 98.0 | 106380002856 | 0
+A6 | 96.0 | 113420077858 | 0
+A7 | 99.0 | 103445466974 | 0
+A8 | 97.0 | 108064368474 | 0
+A9 | 96.0 | 110968976924 | 0
+A10 | 98.0 | 104133598380 | 0
+A11 | 97.0 | 108116632269 | 0
+A12 | 99.0 | 102092787609 | 0
+A13 | 96.0 | 110922996848 | 0
+A14 | 98.0 | 104479780053 | 0
+A15 | 98.0 | 104021397180 | 0
+A16 | 100.0 | 98802725136 | 0
+A17 | 97.0 | 108382703327 | 0
+A18 | 98.0 | 103876164403 | 0
+A19 | 98.0 | 104364815923 | 0
+
+[t=24.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 312217041976 | 0
+
 [t=24.000] BUILDER_TICK builder=0
-[t=24.000] BUILDER_TICK builder=1
-[t=24.000] User A1 MEMPOOL_ADD idx=57 sent tx A1-tx10
-[t=24.000] User A3 MEMPOOL_ADD idx=58 sent tx A3-tx16
-[t=24.000] User A4 MEMPOOL_ADD idx=59 sent tx A4-tx10
+[t=24.000] User A5 MEMPOOL_ADD idx=199 sent tx A5-tx10
+[t=24.000] User A12 MEMPOOL_ADD idx=200 sent tx A12-tx8
+[t=24.000] User A14 MEMPOOL_ADD idx=201 sent tx A14-tx9
+[t=24.000] User A19 MEMPOOL_ADD idx=202 sent tx A19-tx10
+[t=24.500] User A4 MEMPOOL_ADD idx=203 sent tx A4-tx10
+[t=24.500] User A14 MEMPOOL_ADD idx=204 sent tx A14-tx10
+[t=25.000] User A7 MEMPOOL_ADD idx=205 sent tx A7-tx10
+[t=25.000] User A9 MEMPOOL_ADD idx=206 sent tx A9-tx6
+[t=25.000] User A10 MEMPOOL_ADD idx=207 sent tx A10-tx8
+[t=25.000] User A11 MEMPOOL_ADD idx=208 sent tx A11-tx6
+[t=25.000] User A13 MEMPOOL_ADD idx=209 sent tx A13-tx12
+[t=25.000] User A14 MEMPOOL_ADD idx=210 sent tx A14-tx11
+[t=25.000] User A16 MEMPOOL_ADD idx=211 sent tx A16-tx6
+[t=25.000] User A19 MEMPOOL_ADD idx=212 sent tx A19-tx11
+[t=25.500] User A3 MEMPOOL_ADD idx=213 sent tx A3-tx16
+[t=25.500] User A5 MEMPOOL_ADD idx=214 sent tx A5-tx11
+[t=25.500] User A10 MEMPOOL_ADD idx=215 sent tx A10-tx9
+[t=25.500] User A12 MEMPOOL_ADD idx=216 sent tx A12-tx9
+[t=26.000] User A3 MEMPOOL_ADD idx=217 sent tx A3-tx17
+[t=26.500] User A0 MEMPOOL_ADD idx=218 sent tx A0-tx9
+[t=26.500] User A3 MEMPOOL_ADD idx=219 sent tx A3-tx18
+[t=26.500] User A4 MEMPOOL_ADD idx=220 sent tx A4-tx11
+[t=26.500] User A6 MEMPOOL_ADD idx=221 sent tx A6-tx15
+[t=26.500] User A9 MEMPOOL_ADD idx=222 sent tx A9-tx7
+[t=26.500] User A10 MEMPOOL_ADD idx=223 sent tx A10-tx10
+[t=26.500] User A13 MEMPOOL_ADD idx=224 sent tx A13-tx13
+[t=26.500] User A16 MEMPOOL_ADD idx=225 sent tx A16-tx7
+[t=26.500] User A18 MEMPOOL_ADD idx=226 sent tx A18-tx10
+[t=26.500] User A19 MEMPOOL_ADD idx=227 sent tx A19-tx12
+[t=27.000] BUILDER_TICK builder=0
+[t=27.000] User A0 MEMPOOL_ADD idx=228 sent tx A0-tx10
+[t=27.000] User A2 MEMPOOL_ADD idx=229 sent tx A2-tx9
+[t=27.000] User A4 MEMPOOL_ADD idx=230 sent tx A4-tx12
+[t=27.000] User A7 MEMPOOL_ADD idx=231 sent tx A7-tx11
+[t=27.500] User A1 MEMPOOL_ADD idx=232 sent tx A1-tx11
+[t=27.500] User A3 MEMPOOL_ADD idx=233 sent tx A3-tx19
+[t=27.500] User A10 MEMPOOL_ADD idx=234 sent tx A10-tx11
+[t=28.000] User A7 MEMPOOL_ADD idx=235 sent tx A7-tx12
+[t=28.000] User A19 MEMPOOL_ADD idx=236 sent tx A19-tx13
+[t=28.500] User A3 MEMPOOL_ADD idx=237 sent tx A3-tx20
+[t=28.500] User A11 MEMPOOL_ADD idx=238 sent tx A11-tx7
+[t=28.500] User A12 MEMPOOL_ADD idx=239 sent tx A12-tx10
+[t=28.500] User A14 MEMPOOL_ADD idx=240 sent tx A14-tx12
+[t=28.500] User A15 MEMPOOL_ADD idx=241 sent tx A15-tx10
+[t=29.000] User A1 MEMPOOL_ADD idx=242 sent tx A1-tx12
+[t=29.000] User A5 MEMPOOL_ADD idx=243 sent tx A5-tx12
+[t=29.000] User A9 MEMPOOL_ADD idx=244 sent tx A9-tx8
+[t=29.500] User A2 MEMPOOL_ADD idx=245 sent tx A2-tx10
+[t=29.500] User A3 MEMPOOL_ADD idx=246 sent tx A3-tx21
+[t=29.500] User A5 MEMPOOL_ADD idx=247 sent tx A5-tx13
+[t=29.500] User A15 MEMPOOL_ADD idx=248 sent tx A15-tx11
+[t=29.500] User A19 MEMPOOL_ADD idx=249 sent tx A19-tx14
+[t=30.000] BUILDER_TICK builder=0
+[t=30.000] User A3 MEMPOOL_ADD idx=250 sent tx A3-tx22
+[t=30.000] User A7 MEMPOOL_ADD idx=251 sent tx A7-tx13
+[t=30.000] User A15 MEMPOOL_ADD idx=252 sent tx A15-tx12
+[t=30.500] User A3 MEMPOOL_ADD idx=253 sent tx A3-tx23
+[t=31.000] User A6 MEMPOOL_ADD idx=254 sent tx A6-tx16
+[t=31.000] User A13 MEMPOOL_ADD idx=255 sent tx A13-tx14
+[t=31.000] User A18 MEMPOOL_ADD idx=256 sent tx A18-tx11
+[t=31.500] User A1 MEMPOOL_ADD idx=257 sent tx A1-tx13
+[t=31.500] User A2 MEMPOOL_ADD idx=258 sent tx A2-tx11
+[t=31.500] User A5 MEMPOOL_ADD idx=259 sent tx A5-tx14
+[t=31.500] User A10 MEMPOOL_ADD idx=260 sent tx A10-tx12
+[t=31.500] User A11 MEMPOOL_ADD idx=261 sent tx A11-tx8
+[t=31.500] User A12 MEMPOOL_ADD idx=262 sent tx A12-tx11
+[t=31.500] User A14 MEMPOOL_ADD idx=263 sent tx A14-tx13
+[t=32.000] User A7 MEMPOOL_ADD idx=264 sent tx A7-tx14
+[t=32.500] User A0 MEMPOOL_ADD idx=265 sent tx A0-tx11
+[t=32.500] User A3 MEMPOOL_ADD idx=266 sent tx A3-tx24
+[t=32.500] User A10 MEMPOOL_ADD idx=267 sent tx A10-tx13
+[t=32.500] User A12 MEMPOOL_ADD idx=268 sent tx A12-tx12
+[t=33.000] BUILDER_TICK builder=0
+[t=33.000] User A1 MEMPOOL_ADD idx=269 sent tx A1-tx14
+[t=33.000] User A3 MEMPOOL_ADD idx=270 sent tx A3-tx25
+[t=33.000] User A11 MEMPOOL_ADD idx=271 sent tx A11-tx9
+[t=33.000] User A15 MEMPOOL_ADD idx=272 sent tx A15-tx13
+[t=33.500] User A1 MEMPOOL_ADD idx=273 sent tx A1-tx15
+[t=33.500] User A14 MEMPOOL_ADD idx=274 sent tx A14-tx14
+[t=33.500] User A18 MEMPOOL_ADD idx=275 sent tx A18-tx12
+[t=34.000] User A1 MEMPOOL_ADD idx=276 sent tx A1-tx16
+[t=34.000] User A2 MEMPOOL_ADD idx=277 sent tx A2-tx12
+[t=34.000] User A4 MEMPOOL_ADD idx=278 sent tx A4-tx13
+[t=34.000] User A5 MEMPOOL_ADD idx=279 sent tx A5-tx15
+[t=34.000] User A9 MEMPOOL_ADD idx=280 sent tx A9-tx9
+[t=34.000] User A11 MEMPOOL_ADD idx=281 sent tx A11-tx10
+[t=34.000] User A16 MEMPOOL_ADD idx=282 sent tx A16-tx8
+[t=34.000] User A17 MEMPOOL_ADD idx=283 sent tx A17-tx11
+[t=34.500] User A1 MEMPOOL_ADD idx=284 sent tx A1-tx17
+[t=34.500] User A3 MEMPOOL_ADD idx=285 sent tx A3-tx26
+[t=34.500] User A9 MEMPOOL_ADD idx=286 sent tx A9-tx10
+[t=35.000] User A12 MEMPOOL_ADD idx=287 sent tx A12-tx13
+[t=35.000] User A18 MEMPOOL_ADD idx=288 sent tx A18-tx13
+[t=35.500] User A2 MEMPOOL_ADD idx=289 sent tx A2-tx13
+[t=35.500] User A3 MEMPOOL_ADD idx=290 sent tx A3-tx27
+[t=35.500] User A17 MEMPOOL_ADD idx=291 sent tx A17-tx12
+[t=35.500] User A18 MEMPOOL_ADD idx=292 sent tx A18-tx14
+
+[t=36.000] VALIDATOR slot=2 builder id=0 block_len=97
+[t=36.000] SLOT_END slot=2
+[t=36.000] POOLS_END 
+pool | eth | usdc
+A | 14196955904816665503611 | 53817819086837
+B | 17137218781632977090095 | 54043229766670
+
+[t=36.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 95.0 | 114230096062 | 0
+A1 | 97.0 | 109760135558 | 0
+A2 | 96.0 | 113455860697 | 0
+A3 | 97.0 | 107713192239 | 0
+A4 | 98.0 | 106164776681 | 0
+A5 | 98.0 | 105696653623 | 0
+A6 | 96.0 | 111742719448 | 0
+A7 | 97.0 | 108967046195 | 0
+A8 | 97.0 | 108348276367 | 0
+A9 | 96.0 | 112219439877 | 0
+A10 | 98.0 | 106780446129 | 0
+A11 | 96.0 | 112406660985 | 0
+A12 | 99.0 | 101188285626 | 0
+A13 | 96.0 | 111892211619 | 0
+A14 | 97.0 | 108546548388 | 0
+A15 | 99.0 | 103073805475 | 0
+A16 | 99.0 | 100162986221 | 0
+A17 | 96.0 | 110837005771 | 0
+A18 | 98.0 | 105341141096 | 0
+A19 | 97.0 | 108724146866 | 0
+
+[t=36.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 318367711570 | 0
+
+----------------------------------------------------------
+[t=36.000] SLOT_START slot=3
+[t=36.000] POOLS_START 
+pool | eth | usdc
+A | 14196955904816665503611 | 53817819086837
+B | 17137218781632977090095 | 54043229766670
+
+[t=36.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 95.0 | 114230096062 | 0
+A1 | 97.0 | 109760135558 | 0
+A2 | 96.0 | 113455860697 | 0
+A3 | 97.0 | 107713192239 | 0
+A4 | 98.0 | 106164776681 | 0
+A5 | 98.0 | 105696653623 | 0
+A6 | 96.0 | 111742719448 | 0
+A7 | 97.0 | 108967046195 | 0
+A8 | 97.0 | 108348276367 | 0
+A9 | 96.0 | 112219439877 | 0
+A10 | 98.0 | 106780446129 | 0
+A11 | 96.0 | 112406660985 | 0
+A12 | 99.0 | 101188285626 | 0
+A13 | 96.0 | 111892211619 | 0
+A14 | 97.0 | 108546548388 | 0
+A15 | 99.0 | 103073805475 | 0
+A16 | 99.0 | 100162986221 | 0
+A17 | 96.0 | 110837005771 | 0
+A18 | 98.0 | 105341141096 | 0
+A19 | 97.0 | 108724146866 | 0
+
+[t=36.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 318367711570 | 0
+
+[t=36.000] BUILDER_TICK builder=0
+[t=36.000] User A3 MEMPOOL_ADD idx=293 sent tx A3-tx28
+[t=36.000] User A16 MEMPOOL_ADD idx=294 sent tx A16-tx9
+[t=36.500] User A8 MEMPOOL_ADD idx=295 sent tx A8-tx13
+[t=36.500] User A12 MEMPOOL_ADD idx=296 sent tx A12-tx14
+[t=36.500] User A13 MEMPOOL_ADD idx=297 sent tx A13-tx15
+[t=36.500] User A14 MEMPOOL_ADD idx=298 sent tx A14-tx15
+[t=37.000] User A1 MEMPOOL_ADD idx=299 sent tx A1-tx18
+[t=37.000] User A5 MEMPOOL_ADD idx=300 sent tx A5-tx16
+[t=37.000] User A7 MEMPOOL_ADD idx=301 sent tx A7-tx15
+[t=37.000] User A10 MEMPOOL_ADD idx=302 sent tx A10-tx14
+[t=37.000] User A14 MEMPOOL_ADD idx=303 sent tx A14-tx16
+[t=37.000] User A19 MEMPOOL_ADD idx=304 sent tx A19-tx15
+[t=37.500] User A1 MEMPOOL_ADD idx=305 sent tx A1-tx19
+[t=37.500] User A7 MEMPOOL_ADD idx=306 sent tx A7-tx16
+[t=37.500] User A15 MEMPOOL_ADD idx=307 sent tx A15-tx14
+[t=37.500] User A16 MEMPOOL_ADD idx=308 sent tx A16-tx10
+[t=37.500] User A17 MEMPOOL_ADD idx=309 sent tx A17-tx13
+[t=38.000] User A9 MEMPOOL_ADD idx=310 sent tx A9-tx11
+[t=38.000] User A19 MEMPOOL_ADD idx=311 sent tx A19-tx16
+[t=38.500] User A0 MEMPOOL_ADD idx=312 sent tx A0-tx12
+[t=38.500] User A1 MEMPOOL_ADD idx=313 sent tx A1-tx20
+[t=38.500] User A3 MEMPOOL_ADD idx=314 sent tx A3-tx29
+[t=38.500] User A5 MEMPOOL_ADD idx=315 sent tx A5-tx17
+[t=38.500] User A11 MEMPOOL_ADD idx=316 sent tx A11-tx11
+[t=39.000] BUILDER_TICK builder=0
+[t=39.000] User A0 MEMPOOL_ADD idx=317 sent tx A0-tx13
+[t=39.000] User A3 MEMPOOL_ADD idx=318 sent tx A3-tx30
+[t=39.000] User A4 MEMPOOL_ADD idx=319 sent tx A4-tx14
+[t=39.000] User A6 MEMPOOL_ADD idx=320 sent tx A6-tx17
+[t=39.000] User A10 MEMPOOL_ADD idx=321 sent tx A10-tx15
+[t=39.000] User A14 MEMPOOL_ADD idx=322 sent tx A14-tx17
+[t=39.000] User A17 MEMPOOL_ADD idx=323 sent tx A17-tx14
+[t=39.500] User A0 MEMPOOL_ADD idx=324 sent tx A0-tx14
+[t=39.500] User A2 MEMPOOL_ADD idx=325 sent tx A2-tx14
+[t=39.500] User A7 MEMPOOL_ADD idx=326 sent tx A7-tx17
+[t=39.500] User A12 MEMPOOL_ADD idx=327 sent tx A12-tx15
+[t=40.000] User A1 MEMPOOL_ADD idx=328 sent tx A1-tx21
+[t=40.000] User A5 MEMPOOL_ADD idx=329 sent tx A5-tx18
+[t=40.000] User A16 MEMPOOL_ADD idx=330 sent tx A16-tx11
+[t=40.500] User A2 MEMPOOL_ADD idx=331 sent tx A2-tx15
+[t=40.500] User A4 MEMPOOL_ADD idx=332 sent tx A4-tx15
+[t=40.500] User A8 MEMPOOL_ADD idx=333 sent tx A8-tx14
+[t=40.500] User A9 MEMPOOL_ADD idx=334 sent tx A9-tx12
+[t=40.500] User A19 MEMPOOL_ADD idx=335 sent tx A19-tx17
+[t=41.000] User A3 MEMPOOL_ADD idx=336 sent tx A3-tx31
+[t=41.000] User A4 MEMPOOL_ADD idx=337 sent tx A4-tx16
+[t=41.000] User A5 MEMPOOL_ADD idx=338 sent tx A5-tx19
+[t=41.000] User A7 MEMPOOL_ADD idx=339 sent tx A7-tx18
+[t=41.000] User A12 MEMPOOL_ADD idx=340 sent tx A12-tx16
+[t=41.000] User A18 MEMPOOL_ADD idx=341 sent tx A18-tx15
+[t=41.500] User A6 MEMPOOL_ADD idx=342 sent tx A6-tx18
+[t=41.500] User A14 MEMPOOL_ADD idx=343 sent tx A14-tx18
+[t=41.500] User A15 MEMPOOL_ADD idx=344 sent tx A15-tx15
+[t=41.500] User A19 MEMPOOL_ADD idx=345 sent tx A19-tx18
+[t=42.000] BUILDER_TICK builder=0
+[t=42.000] User A0 MEMPOOL_ADD idx=346 sent tx A0-tx15
+[t=42.000] User A5 MEMPOOL_ADD idx=347 sent tx A5-tx20
+[t=42.000] User A7 MEMPOOL_ADD idx=348 sent tx A7-tx19
+[t=42.000] User A13 MEMPOOL_ADD idx=349 sent tx A13-tx16
+[t=42.000] User A15 MEMPOOL_ADD idx=350 sent tx A15-tx16
+[t=42.500] User A0 MEMPOOL_ADD idx=351 sent tx A0-tx16
+[t=43.000] User A6 MEMPOOL_ADD idx=352 sent tx A6-tx19
+[t=43.000] User A9 MEMPOOL_ADD idx=353 sent tx A9-tx13
+[t=43.000] User A17 MEMPOOL_ADD idx=354 sent tx A17-tx15
+[t=43.500] User A7 MEMPOOL_ADD idx=355 sent tx A7-tx20
+[t=43.500] User A10 MEMPOOL_ADD idx=356 sent tx A10-tx16
+[t=43.500] User A13 MEMPOOL_ADD idx=357 sent tx A13-tx17
+[t=43.500] User A14 MEMPOOL_ADD idx=358 sent tx A14-tx19
+[t=44.000] User A3 MEMPOOL_ADD idx=359 sent tx A3-tx32
+[t=44.000] User A14 MEMPOOL_ADD idx=360 sent tx A14-tx20
+[t=44.000] User A15 MEMPOOL_ADD idx=361 sent tx A15-tx17
+[t=44.000] User A19 MEMPOOL_ADD idx=362 sent tx A19-tx19
+[t=44.500] User A12 MEMPOOL_ADD idx=363 sent tx A12-tx17
+[t=44.500] User A15 MEMPOOL_ADD idx=364 sent tx A15-tx18
+[t=44.500] User A16 MEMPOOL_ADD idx=365 sent tx A16-tx12
+[t=45.000] BUILDER_TICK builder=0
+[t=45.000] User A0 MEMPOOL_ADD idx=366 sent tx A0-tx17
+[t=45.000] User A2 MEMPOOL_ADD idx=367 sent tx A2-tx16
+[t=45.000] User A3 MEMPOOL_ADD idx=368 sent tx A3-tx33
+[t=45.000] User A6 MEMPOOL_ADD idx=369 sent tx A6-tx20
+[t=45.000] User A8 MEMPOOL_ADD idx=370 sent tx A8-tx15
+[t=45.000] User A12 MEMPOOL_ADD idx=371 sent tx A12-tx18
+[t=45.000] User A13 MEMPOOL_ADD idx=372 sent tx A13-tx18
+[t=45.000] User A15 MEMPOOL_ADD idx=373 sent tx A15-tx19
+[t=45.000] User A16 MEMPOOL_ADD idx=374 sent tx A16-tx13
+[t=45.000] User A19 MEMPOOL_ADD idx=375 sent tx A19-tx20
+[t=45.500] User A1 MEMPOOL_ADD idx=376 sent tx A1-tx22
+[t=45.500] User A14 MEMPOOL_ADD idx=377 sent tx A14-tx21
+[t=45.500] User A16 MEMPOOL_ADD idx=378 sent tx A16-tx14
+[t=46.000] User A8 MEMPOOL_ADD idx=379 sent tx A8-tx16
+[t=46.000] User A19 MEMPOOL_ADD idx=380 sent tx A19-tx21
+[t=46.500] User A11 MEMPOOL_ADD idx=381 sent tx A11-tx12
+[t=46.500] User A18 MEMPOOL_ADD idx=382 sent tx A18-tx16
+[t=47.000] User A6 MEMPOOL_ADD idx=383 sent tx A6-tx21
+[t=47.500] User A9 MEMPOOL_ADD idx=384 sent tx A9-tx14
+[t=47.500] User A15 MEMPOOL_ADD idx=385 sent tx A15-tx20
+[t=47.500] User A16 MEMPOOL_ADD idx=386 sent tx A16-tx15
+
+[t=48.000] VALIDATOR slot=3 builder id=0 block_len=99
+[t=48.000] SLOT_END slot=3
+[t=48.000] POOLS_END 
+pool | eth | usdc
+A | 14219910264836250988873 | 53731257527550
+B | 17134897614046606467013 | 54050802860988
+
+[t=48.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 94.0 | 119376204504 | 0
+A1 | 96.0 | 113469017623 | 0
+A2 | 95.0 | 116350493506 | 0
+A3 | 95.0 | 115717873845 | 0
+A4 | 98.0 | 104685565106 | 0
+A5 | 96.0 | 110492984802 | 0
+A6 | 95.0 | 114075793296 | 0
+A7 | 93.0 | 123399479917 | 0
+A8 | 96.0 | 110941953227 | 0
+A9 | 94.0 | 117224404536 | 0
+A10 | 97.0 | 110704285019 | 0
+A11 | 95.0 | 114486924481 | 0
+A12 | 100.0 | 98084551627 | 0
+A13 | 97.0 | 110523857428 | 0
+A14 | 94.0 | 119002594845 | 0
+A15 | 98.0 | 104128760386 | 0
+A16 | 98.0 | 104730434602 | 0
+A17 | 96.0 | 112031650216 | 0
+A18 | 96.0 | 111345525715 | 0
+A19 | 97.0 | 109312719396 | 0
+
+[t=48.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 324522537385 | 0
+
+----------------------------------------------------------
+[t=48.000] SLOT_START slot=4
+[t=48.000] POOLS_START 
+pool | eth | usdc
+A | 14219910264836250988873 | 53731257527550
+B | 17134897614046606467013 | 54050802860988
+
+[t=48.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 94.0 | 119376204504 | 0
+A1 | 96.0 | 113469017623 | 0
+A2 | 95.0 | 116350493506 | 0
+A3 | 95.0 | 115717873845 | 0
+A4 | 98.0 | 104685565106 | 0
+A5 | 96.0 | 110492984802 | 0
+A6 | 95.0 | 114075793296 | 0
+A7 | 93.0 | 123399479917 | 0
+A8 | 96.0 | 110941953227 | 0
+A9 | 94.0 | 117224404536 | 0
+A10 | 97.0 | 110704285019 | 0
+A11 | 95.0 | 114486924481 | 0
+A12 | 100.0 | 98084551627 | 0
+A13 | 97.0 | 110523857428 | 0
+A14 | 94.0 | 119002594845 | 0
+A15 | 98.0 | 104128760386 | 0
+A16 | 98.0 | 104730434602 | 0
+A17 | 96.0 | 112031650216 | 0
+A18 | 96.0 | 111345525715 | 0
+A19 | 97.0 | 109312719396 | 0
+
+[t=48.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 324522537385 | 0
+
+[t=48.000] BUILDER_TICK builder=0
+[t=48.000] User A0 MEMPOOL_ADD idx=387 sent tx A0-tx18
+[t=48.500] User A18 MEMPOOL_ADD idx=388 sent tx A18-tx17
+[t=49.000] User A11 MEMPOOL_ADD idx=389 sent tx A11-tx13
+[t=49.000] User A12 MEMPOOL_ADD idx=390 sent tx A12-tx19
+[t=49.000] User A16 MEMPOOL_ADD idx=391 sent tx A16-tx16
+[t=49.500] User A3 MEMPOOL_ADD idx=392 sent tx A3-tx34
+[t=49.500] User A6 MEMPOOL_ADD idx=393 sent tx A6-tx22
+[t=49.500] User A8 MEMPOOL_ADD idx=394 sent tx A8-tx17
+[t=49.500] User A12 MEMPOOL_ADD idx=395 sent tx A12-tx20
+[t=49.500] User A15 MEMPOOL_ADD idx=396 sent tx A15-tx21
+[t=50.000] User A0 MEMPOOL_ADD idx=397 sent tx A0-tx19
+[t=50.000] User A1 MEMPOOL_ADD idx=398 sent tx A1-tx23
+[t=50.000] User A4 MEMPOOL_ADD idx=399 sent tx A4-tx17
+[t=50.000] User A5 MEMPOOL_ADD idx=400 sent tx A5-tx21
+[t=50.000] User A14 MEMPOOL_ADD idx=401 sent tx A14-tx22
+[t=50.000] User A19 MEMPOOL_ADD idx=402 sent tx A19-tx22
+[t=50.500] User A0 MEMPOOL_ADD idx=403 sent tx A0-tx20
+[t=50.500] User A3 MEMPOOL_ADD idx=404 sent tx A3-tx35
+[t=50.500] User A8 MEMPOOL_ADD idx=405 sent tx A8-tx18
+[t=50.500] User A16 MEMPOOL_ADD idx=406 sent tx A16-tx17
+[t=51.000] BUILDER_TICK builder=0
+[t=51.000] User A3 MEMPOOL_ADD idx=407 sent tx A3-tx36
+[t=51.000] User A12 MEMPOOL_ADD idx=408 sent tx A12-tx21
+[t=51.000] User A17 MEMPOOL_ADD idx=409 sent tx A17-tx16
+[t=51.000] User A19 MEMPOOL_ADD idx=410 sent tx A19-tx23
+[t=51.500] User A0 MEMPOOL_ADD idx=411 sent tx A0-tx21
+[t=51.500] User A7 MEMPOOL_ADD idx=412 sent tx A7-tx21
+[t=51.500] User A9 MEMPOOL_ADD idx=413 sent tx A9-tx15
+[t=51.500] User A17 MEMPOOL_ADD idx=414 sent tx A17-tx17
+[t=52.000] User A0 MEMPOOL_ADD idx=415 sent tx A0-tx22
+[t=52.000] User A1 MEMPOOL_ADD idx=416 sent tx A1-tx24
+[t=52.000] User A6 MEMPOOL_ADD idx=417 sent tx A6-tx23
+[t=52.000] User A11 MEMPOOL_ADD idx=418 sent tx A11-tx14
+[t=52.000] User A12 MEMPOOL_ADD idx=419 sent tx A12-tx22
+[t=52.000] User A15 MEMPOOL_ADD idx=420 sent tx A15-tx22
+[t=52.500] User A2 MEMPOOL_ADD idx=421 sent tx A2-tx17
+[t=52.500] User A11 MEMPOOL_ADD idx=422 sent tx A11-tx15
+[t=52.500] User A12 MEMPOOL_ADD idx=423 sent tx A12-tx23
+[t=52.500] User A13 MEMPOOL_ADD idx=424 sent tx A13-tx19
+[t=52.500] User A16 MEMPOOL_ADD idx=425 sent tx A16-tx18
+[t=52.500] User A19 MEMPOOL_ADD idx=426 sent tx A19-tx24
+[t=53.000] User A1 MEMPOOL_ADD idx=427 sent tx A1-tx25
+[t=53.000] User A5 MEMPOOL_ADD idx=428 sent tx A5-tx22
+[t=53.000] User A9 MEMPOOL_ADD idx=429 sent tx A9-tx16
+[t=53.000] User A15 MEMPOOL_ADD idx=430 sent tx A15-tx23
+[t=53.500] User A7 MEMPOOL_ADD idx=431 sent tx A7-tx22
+[t=53.500] User A8 MEMPOOL_ADD idx=432 sent tx A8-tx19
+[t=53.500] User A16 MEMPOOL_ADD idx=433 sent tx A16-tx19
+[t=54.000] BUILDER_TICK builder=0
+[t=54.000] User A10 MEMPOOL_ADD idx=434 sent tx A10-tx17
+[t=54.000] User A19 MEMPOOL_ADD idx=435 sent tx A19-tx25
+[t=54.500] User A0 MEMPOOL_ADD idx=436 sent tx A0-tx23
+[t=54.500] User A3 MEMPOOL_ADD idx=437 sent tx A3-tx37
+[t=54.500] User A15 MEMPOOL_ADD idx=438 sent tx A15-tx24
+[t=55.000] User A13 MEMPOOL_ADD idx=439 sent tx A13-tx20
+[t=55.000] User A16 MEMPOOL_ADD idx=440 sent tx A16-tx20
+[t=55.000] User A17 MEMPOOL_ADD idx=441 sent tx A17-tx18
+[t=55.000] User A19 MEMPOOL_ADD idx=442 sent tx A19-tx26
+[t=55.500] User A0 MEMPOOL_ADD idx=443 sent tx A0-tx24
+[t=55.500] User A1 MEMPOOL_ADD idx=444 sent tx A1-tx26
+[t=55.500] User A9 MEMPOOL_ADD idx=445 sent tx A9-tx17
+[t=55.500] User A10 MEMPOOL_ADD idx=446 sent tx A10-tx18
+[t=56.000] User A0 MEMPOOL_ADD idx=447 sent tx A0-tx25
+[t=56.000] User A1 MEMPOOL_ADD idx=448 sent tx A1-tx27
+[t=56.000] User A11 MEMPOOL_ADD idx=449 sent tx A11-tx16
+[t=56.000] User A13 MEMPOOL_ADD idx=450 sent tx A13-tx21
+[t=56.000] User A15 MEMPOOL_ADD idx=451 sent tx A15-tx25
+[t=56.000] User A16 MEMPOOL_ADD idx=452 sent tx A16-tx21
+[t=56.000] User A17 MEMPOOL_ADD idx=453 sent tx A17-tx19
+[t=56.500] User A5 MEMPOOL_ADD idx=454 sent tx A5-tx23
+[t=56.500] User A13 MEMPOOL_ADD idx=455 sent tx A13-tx22
+[t=56.500] User A16 MEMPOOL_ADD idx=456 sent tx A16-tx22
+[t=56.500] User A17 MEMPOOL_ADD idx=457 sent tx A17-tx20
+[t=57.000] BUILDER_TICK builder=0
+[t=57.000] User A1 MEMPOOL_ADD idx=458 sent tx A1-tx28
+[t=57.000] User A8 MEMPOOL_ADD idx=459 sent tx A8-tx20
+[t=57.000] User A12 MEMPOOL_ADD idx=460 sent tx A12-tx24
+[t=57.500] User A12 MEMPOOL_ADD idx=461 sent tx A12-tx25
+[t=57.500] User A17 MEMPOOL_ADD idx=462 sent tx A17-tx21
+[t=58.000] User A10 MEMPOOL_ADD idx=463 sent tx A10-tx19
+[t=58.500] User A19 MEMPOOL_ADD idx=464 sent tx A19-tx27
+[t=59.000] User A0 MEMPOOL_ADD idx=465 sent tx A0-tx26
+[t=59.000] User A7 MEMPOOL_ADD idx=466 sent tx A7-tx23
+[t=59.000] User A11 MEMPOOL_ADD idx=467 sent tx A11-tx17
+[t=59.000] User A12 MEMPOOL_ADD idx=468 sent tx A12-tx26
+[t=59.000] User A19 MEMPOOL_ADD idx=469 sent tx A19-tx28
+[t=59.500] User A3 MEMPOOL_ADD idx=470 sent tx A3-tx38
+[t=59.500] User A11 MEMPOOL_ADD idx=471 sent tx A11-tx18
+[t=59.500] User A18 MEMPOOL_ADD idx=472 sent tx A18-tx18
+[t=59.500] User A19 MEMPOOL_ADD idx=473 sent tx A19-tx29
+
+[t=60.000] VALIDATOR slot=4 builder id=0 block_len=94
+[t=60.000] SLOT_END slot=4
+[t=60.000] POOLS_END 
+pool | eth | usdc
+A | 14240390718787774241928 | 53654296638442
+B | 17132815270315289019149 | 54057602485648
+
+[t=60.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 91.0 | 127022714341 | 0
+A1 | 95.0 | 118028518677 | 0
+A2 | 95.0 | 114760148100 | 0
+A3 | 94.0 | 119391983879 | 0
+A4 | 98.0 | 104893305050 | 0
+A5 | 96.0 | 111303328083 | 0
+A6 | 95.0 | 117281665371 | 0
+A7 | 92.0 | 125319154584 | 0
+A8 | 95.0 | 115208312303 | 0
+A9 | 93.0 | 121103544868 | 0
+A10 | 97.0 | 109215895364 | 0
+A11 | 95.0 | 113952502036 | 0
+A12 | 100.0 | 99253804184 | 0
+A13 | 96.0 | 112256842167 | 0
+A14 | 94.0 | 119227828011 | 0
+A15 | 95.0 | 116633746274 | 0
+A16 | 97.0 | 109615656736 | 0
+A17 | 94.0 | 120473372665 | 0
+A18 | 96.0 | 113854465832 | 0
+A19 | 95.0 | 115311981413 | 0
+
+[t=60.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 330660105972 | 0
+
+----------------------------------------------------------
+[t=60.000] SLOT_START slot=5
+[t=60.000] POOLS_START 
+pool | eth | usdc
+A | 14240390718787774241928 | 53654296638442
+B | 17132815270315289019149 | 54057602485648
+
+[t=60.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 91.0 | 127022714341 | 0
+A1 | 95.0 | 118028518677 | 0
+A2 | 95.0 | 114760148100 | 0
+A3 | 94.0 | 119391983879 | 0
+A4 | 98.0 | 104893305050 | 0
+A5 | 96.0 | 111303328083 | 0
+A6 | 95.0 | 117281665371 | 0
+A7 | 92.0 | 125319154584 | 0
+A8 | 95.0 | 115208312303 | 0
+A9 | 93.0 | 121103544868 | 0
+A10 | 97.0 | 109215895364 | 0
+A11 | 95.0 | 113952502036 | 0
+A12 | 100.0 | 99253804184 | 0
+A13 | 96.0 | 112256842167 | 0
+A14 | 94.0 | 119227828011 | 0
+A15 | 95.0 | 116633746274 | 0
+A16 | 97.0 | 109615656736 | 0
+A17 | 94.0 | 120473372665 | 0
+A18 | 96.0 | 113854465832 | 0
+A19 | 95.0 | 115311981413 | 0
+
+[t=60.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 330660105972 | 0
+
+[t=60.000] BUILDER_TICK builder=0
+[t=60.000] User A0 MEMPOOL_ADD idx=474 sent tx A0-tx27
+[t=60.000] User A2 MEMPOOL_ADD idx=475 sent tx A2-tx18
+[t=60.000] User A3 MEMPOOL_ADD idx=476 sent tx A3-tx39
+[t=60.000] User A5 MEMPOOL_ADD idx=477 sent tx A5-tx24
+[t=60.000] User A8 MEMPOOL_ADD idx=478 sent tx A8-tx21
+[t=60.000] User A15 MEMPOOL_ADD idx=479 sent tx A15-tx26
+[t=60.500] User A7 MEMPOOL_ADD idx=480 sent tx A7-tx24
+[t=60.500] User A14 MEMPOOL_ADD idx=481 sent tx A14-tx23
+[t=61.000] User A10 MEMPOOL_ADD idx=482 sent tx A10-tx20
+[t=61.000] User A18 MEMPOOL_ADD idx=483 sent tx A18-tx19
+[t=61.000] User A19 MEMPOOL_ADD idx=484 sent tx A19-tx30
+[t=61.500] User A6 MEMPOOL_ADD idx=485 sent tx A6-tx24
+[t=61.500] User A10 MEMPOOL_ADD idx=486 sent tx A10-tx21
+[t=62.000] User A4 MEMPOOL_ADD idx=487 sent tx A4-tx18
+[t=62.000] User A5 MEMPOOL_ADD idx=488 sent tx A5-tx25
+[t=62.000] User A8 MEMPOOL_ADD idx=489 sent tx A8-tx22
+[t=62.000] User A10 MEMPOOL_ADD idx=490 sent tx A10-tx22
+[t=62.000] User A11 MEMPOOL_ADD idx=491 sent tx A11-tx19
+[t=62.000] User A13 MEMPOOL_ADD idx=492 sent tx A13-tx23
+[t=62.000] User A14 MEMPOOL_ADD idx=493 sent tx A14-tx24
+[t=62.000] User A17 MEMPOOL_ADD idx=494 sent tx A17-tx22
+[t=62.500] User A12 MEMPOOL_ADD idx=495 sent tx A12-tx27
+[t=63.000] BUILDER_TICK builder=0
+[t=63.000] User A1 MEMPOOL_ADD idx=496 sent tx A1-tx29
+[t=63.000] User A8 MEMPOOL_ADD idx=497 sent tx A8-tx23
+[t=63.000] User A9 MEMPOOL_ADD idx=498 sent tx A9-tx18
+[t=63.000] User A14 MEMPOOL_ADD idx=499 sent tx A14-tx25
+[t=63.000] User A19 MEMPOOL_ADD idx=500 sent tx A19-tx31
+[t=63.500] User A5 MEMPOOL_ADD idx=501 sent tx A5-tx26
+[t=63.500] User A18 MEMPOOL_ADD idx=502 sent tx A18-tx20
+[t=64.000] User A8 MEMPOOL_ADD idx=503 sent tx A8-tx24
+[t=64.000] User A10 MEMPOOL_ADD idx=504 sent tx A10-tx23
+[t=64.000] User A16 MEMPOOL_ADD idx=505 sent tx A16-tx23
+[t=64.000] User A18 MEMPOOL_ADD idx=506 sent tx A18-tx21
+[t=64.500] User A4 MEMPOOL_ADD idx=507 sent tx A4-tx19
+[t=64.500] User A11 MEMPOOL_ADD idx=508 sent tx A11-tx20
+[t=64.500] User A12 MEMPOOL_ADD idx=509 sent tx A12-tx28
+[t=64.500] User A13 MEMPOOL_ADD idx=510 sent tx A13-tx24
+[t=64.500] User A16 MEMPOOL_ADD idx=511 sent tx A16-tx24
+[t=64.500] User A19 MEMPOOL_ADD idx=512 sent tx A19-tx32
+[t=65.000] User A0 MEMPOOL_ADD idx=513 sent tx A0-tx28
+[t=65.000] User A3 MEMPOOL_ADD idx=514 sent tx A3-tx40
+[t=65.000] User A9 MEMPOOL_ADD idx=515 sent tx A9-tx19
+[t=65.000] User A10 MEMPOOL_ADD idx=516 sent tx A10-tx24
+[t=65.000] User A18 MEMPOOL_ADD idx=517 sent tx A18-tx22
+[t=65.500] User A12 MEMPOOL_ADD idx=518 sent tx A12-tx29
+[t=66.000] BUILDER_TICK builder=0
+[t=66.000] User A0 MEMPOOL_ADD idx=519 sent tx A0-tx29
+[t=66.000] User A6 MEMPOOL_ADD idx=520 sent tx A6-tx25
+[t=66.000] User A11 MEMPOOL_ADD idx=521 sent tx A11-tx21
+[t=66.000] User A14 MEMPOOL_ADD idx=522 sent tx A14-tx26
+[t=66.000] User A18 MEMPOOL_ADD idx=523 sent tx A18-tx23
+[t=66.500] User A1 MEMPOOL_ADD idx=524 sent tx A1-tx30
+[t=66.500] User A3 MEMPOOL_ADD idx=525 sent tx A3-tx41
+[t=66.500] User A4 MEMPOOL_ADD idx=526 sent tx A4-tx20
+[t=66.500] User A7 MEMPOOL_ADD idx=527 sent tx A7-tx25
+[t=66.500] User A10 MEMPOOL_ADD idx=528 sent tx A10-tx25
+[t=66.500] User A13 MEMPOOL_ADD idx=529 sent tx A13-tx25
+[t=66.500] User A18 MEMPOOL_ADD idx=530 sent tx A18-tx24
+[t=67.000] User A1 MEMPOOL_ADD idx=531 sent tx A1-tx31
+[t=67.000] User A3 MEMPOOL_ADD idx=532 sent tx A3-tx42
+[t=67.000] User A4 MEMPOOL_ADD idx=533 sent tx A4-tx21
+[t=67.000] User A5 MEMPOOL_ADD idx=534 sent tx A5-tx27
+[t=67.000] User A7 MEMPOOL_ADD idx=535 sent tx A7-tx26
+[t=67.000] User A12 MEMPOOL_ADD idx=536 sent tx A12-tx30
+[t=67.000] User A19 MEMPOOL_ADD idx=537 sent tx A19-tx33
+[t=67.500] User A3 MEMPOOL_ADD idx=538 sent tx A3-tx43
+[t=67.500] User A9 MEMPOOL_ADD idx=539 sent tx A9-tx20
+[t=67.500] User A15 MEMPOOL_ADD idx=540 sent tx A15-tx27
+[t=68.000] User A13 MEMPOOL_ADD idx=541 sent tx A13-tx26
+[t=68.500] User A8 MEMPOOL_ADD idx=542 sent tx A8-tx25
+[t=68.500] User A12 MEMPOOL_ADD idx=543 sent tx A12-tx31
+[t=68.500] User A14 MEMPOOL_ADD idx=544 sent tx A14-tx27
+[t=68.500] User A15 MEMPOOL_ADD idx=545 sent tx A15-tx28
+[t=69.000] BUILDER_TICK builder=0
+[t=69.000] User A1 MEMPOOL_ADD idx=546 sent tx A1-tx32
+[t=69.000] User A3 MEMPOOL_ADD idx=547 sent tx A3-tx44
+[t=69.000] User A5 MEMPOOL_ADD idx=548 sent tx A5-tx28
+[t=69.000] User A11 MEMPOOL_ADD idx=549 sent tx A11-tx22
+[t=69.000] User A12 MEMPOOL_ADD idx=550 sent tx A12-tx32
+[t=69.000] User A14 MEMPOOL_ADD idx=551 sent tx A14-tx28
+[t=69.000] User A15 MEMPOOL_ADD idx=552 sent tx A15-tx29
+[t=69.000] User A16 MEMPOOL_ADD idx=553 sent tx A16-tx25
+[t=69.000] User A17 MEMPOOL_ADD idx=554 sent tx A17-tx23
+[t=69.000] User A18 MEMPOOL_ADD idx=555 sent tx A18-tx25
+[t=69.500] User A4 MEMPOOL_ADD idx=556 sent tx A4-tx22
+[t=69.500] User A10 MEMPOOL_ADD idx=557 sent tx A10-tx26
+[t=70.000] User A3 MEMPOOL_ADD idx=558 sent tx A3-tx45
+[t=70.000] User A5 MEMPOOL_ADD idx=559 sent tx A5-tx29
+[t=70.500] User A6 MEMPOOL_ADD idx=560 sent tx A6-tx26
+[t=70.500] User A13 MEMPOOL_ADD idx=561 sent tx A13-tx27
+[t=70.500] User A16 MEMPOOL_ADD idx=562 sent tx A16-tx26
+[t=70.500] User A19 MEMPOOL_ADD idx=563 sent tx A19-tx34
+[t=71.000] User A0 MEMPOOL_ADD idx=564 sent tx A0-tx30
+[t=71.000] User A3 MEMPOOL_ADD idx=565 sent tx A3-tx46
+[t=71.000] User A4 MEMPOOL_ADD idx=566 sent tx A4-tx23
+[t=71.000] User A6 MEMPOOL_ADD idx=567 sent tx A6-tx27
+[t=71.500] User A0 MEMPOOL_ADD idx=568 sent tx A0-tx31
+[t=71.500] User A4 MEMPOOL_ADD idx=569 sent tx A4-tx24
+[t=71.500] User A18 MEMPOOL_ADD idx=570 sent tx A18-tx26
+
+[t=72.000] VALIDATOR slot=5 builder id=0 block_len=90
+[t=72.000] SLOT_END slot=5
+[t=72.000] POOLS_END 
+pool | eth | usdc
+A | 14255255907423101588600 | 53598577473940
+B | 17136124760907448744846 | 54047426260661
+
+[t=72.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 90.0 | 132171259202 | 0
+A1 | 94.0 | 118279828888 | 0
+A2 | 95.0 | 116080298367 | 0
+A3 | 92.0 | 124120612452 | 0
+A4 | 96.0 | 110336521769 | 0
+A5 | 96.0 | 110301871607 | 0
+A6 | 95.0 | 116421312362 | 0
+A7 | 92.0 | 127131624111 | 0
+A8 | 96.0 | 113675584103 | 0
+A9 | 92.0 | 125402567328 | 0
+A10 | 94.0 | 118575298372 | 0
+A11 | 93.0 | 120703677676 | 0
+A12 | 97.0 | 108154911697 | 0
+A13 | 96.0 | 112754538342 | 0
+A14 | 93.0 | 121778072728 | 0
+A15 | 94.0 | 120047996293 | 0
+A16 | 96.0 | 110348828621 | 0
+A17 | 94.0 | 120128131403 | 0
+A18 | 94.0 | 117572500130 | 0
+A19 | 93.0 | 119888484914 | 0
+
+[t=72.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 336790345034 | 0
+
+----------------------------------------------------------
+[t=72.000] SLOT_START slot=6
+[t=72.000] POOLS_START 
+pool | eth | usdc
+A | 14255255907423101588600 | 53598577473940
+B | 17136124760907448744846 | 54047426260661
+
+[t=72.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 90.0 | 132171259202 | 0
+A1 | 94.0 | 118279828888 | 0
+A2 | 95.0 | 116080298367 | 0
+A3 | 92.0 | 124120612452 | 0
+A4 | 96.0 | 110336521769 | 0
+A5 | 96.0 | 110301871607 | 0
+A6 | 95.0 | 116421312362 | 0
+A7 | 92.0 | 127131624111 | 0
+A8 | 96.0 | 113675584103 | 0
+A9 | 92.0 | 125402567328 | 0
+A10 | 94.0 | 118575298372 | 0
+A11 | 93.0 | 120703677676 | 0
+A12 | 97.0 | 108154911697 | 0
+A13 | 96.0 | 112754538342 | 0
+A14 | 93.0 | 121778072728 | 0
+A15 | 94.0 | 120047996293 | 0
+A16 | 96.0 | 110348828621 | 0
+A17 | 94.0 | 120128131403 | 0
+A18 | 94.0 | 117572500130 | 0
+A19 | 93.0 | 119888484914 | 0
+
+[t=72.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 336790345034 | 0
+
+[t=72.000] BUILDER_TICK builder=0
+[t=72.000] User A8 MEMPOOL_ADD idx=571 sent tx A8-tx26
+[t=72.000] User A10 MEMPOOL_ADD idx=572 sent tx A10-tx27
+[t=72.500] User A3 MEMPOOL_ADD idx=573 sent tx A3-tx47
+[t=72.500] User A5 MEMPOOL_ADD idx=574 sent tx A5-tx30
+[t=72.500] User A6 MEMPOOL_ADD idx=575 sent tx A6-tx28
+[t=72.500] User A7 MEMPOOL_ADD idx=576 sent tx A7-tx27
+[t=72.500] User A10 MEMPOOL_ADD idx=577 sent tx A10-tx28
+[t=72.500] User A11 MEMPOOL_ADD idx=578 sent tx A11-tx23
+[t=72.500] User A16 MEMPOOL_ADD idx=579 sent tx A16-tx27
+[t=72.500] User A17 MEMPOOL_ADD idx=580 sent tx A17-tx24
+[t=72.500] User A18 MEMPOOL_ADD idx=581 sent tx A18-tx27
+[t=73.000] User A2 MEMPOOL_ADD idx=582 sent tx A2-tx19
+[t=73.000] User A4 MEMPOOL_ADD idx=583 sent tx A4-tx25
+[t=73.000] User A6 MEMPOOL_ADD idx=584 sent tx A6-tx29
+[t=73.000] User A7 MEMPOOL_ADD idx=585 sent tx A7-tx28
+[t=73.000] User A15 MEMPOOL_ADD idx=586 sent tx A15-tx30
+[t=73.500] User A5 MEMPOOL_ADD idx=587 sent tx A5-tx31
+[t=73.500] User A8 MEMPOOL_ADD idx=588 sent tx A8-tx27
+[t=73.500] User A13 MEMPOOL_ADD idx=589 sent tx A13-tx28
+[t=74.000] User A4 MEMPOOL_ADD idx=590 sent tx A4-tx26
+[t=74.000] User A9 MEMPOOL_ADD idx=591 sent tx A9-tx21
+[t=74.000] User A11 MEMPOOL_ADD idx=592 sent tx A11-tx24
+[t=74.000] User A13 MEMPOOL_ADD idx=593 sent tx A13-tx29
+[t=74.000] User A16 MEMPOOL_ADD idx=594 sent tx A16-tx28
+[t=74.500] User A6 MEMPOOL_ADD idx=595 sent tx A6-tx30
+[t=75.000] BUILDER_TICK builder=0
+[t=75.000] User A2 MEMPOOL_ADD idx=596 sent tx A2-tx20
+[t=75.000] User A4 MEMPOOL_ADD idx=597 sent tx A4-tx27
+[t=75.000] User A6 MEMPOOL_ADD idx=598 sent tx A6-tx31
+[t=75.000] User A7 MEMPOOL_ADD idx=599 sent tx A7-tx29
+[t=75.000] User A8 MEMPOOL_ADD idx=600 sent tx A8-tx28
+[t=75.000] User A10 MEMPOOL_ADD idx=601 sent tx A10-tx29
+[t=75.000] User A16 MEMPOOL_ADD idx=602 sent tx A16-tx29
+[t=75.000] User A19 MEMPOOL_ADD idx=603 sent tx A19-tx35
+[t=75.500] User A2 MEMPOOL_ADD idx=604 sent tx A2-tx21
+[t=75.500] User A3 MEMPOOL_ADD idx=605 sent tx A3-tx48
+[t=75.500] User A7 MEMPOOL_ADD idx=606 sent tx A7-tx30
+[t=75.500] User A8 MEMPOOL_ADD idx=607 sent tx A8-tx29
+[t=75.500] User A13 MEMPOOL_ADD idx=608 sent tx A13-tx30
+[t=75.500] User A14 MEMPOOL_ADD idx=609 sent tx A14-tx29
+[t=75.500] User A17 MEMPOOL_ADD idx=610 sent tx A17-tx25
+[t=75.500] User A18 MEMPOOL_ADD idx=611 sent tx A18-tx28
+[t=76.000] User A3 MEMPOOL_ADD idx=612 sent tx A3-tx49
+[t=76.000] User A7 MEMPOOL_ADD idx=613 sent tx A7-tx31
+[t=76.500] User A5 MEMPOOL_ADD idx=614 sent tx A5-tx32
+[t=76.500] User A9 MEMPOOL_ADD idx=615 sent tx A9-tx22
+[t=76.500] User A15 MEMPOOL_ADD idx=616 sent tx A15-tx31
+[t=77.000] User A10 MEMPOOL_ADD idx=617 sent tx A10-tx30
+[t=77.000] User A15 MEMPOOL_ADD idx=618 sent tx A15-tx32
+[t=77.500] User A12 MEMPOOL_ADD idx=619 sent tx A12-tx33
+[t=77.500] User A13 MEMPOOL_ADD idx=620 sent tx A13-tx31
+[t=77.500] User A16 MEMPOOL_ADD idx=621 sent tx A16-tx30
+[t=78.000] BUILDER_TICK builder=0
+[t=78.000] User A11 MEMPOOL_ADD idx=622 sent tx A11-tx25
+[t=78.000] User A13 MEMPOOL_ADD idx=623 sent tx A13-tx32
+[t=78.000] User A14 MEMPOOL_ADD idx=624 sent tx A14-tx30
+[t=78.000] User A15 MEMPOOL_ADD idx=625 sent tx A15-tx33
+[t=78.000] User A19 MEMPOOL_ADD idx=626 sent tx A19-tx36
+[t=78.500] User A4 MEMPOOL_ADD idx=627 sent tx A4-tx28
+[t=79.000] User A4 MEMPOOL_ADD idx=628 sent tx A4-tx29
+[t=79.000] User A7 MEMPOOL_ADD idx=629 sent tx A7-tx32
+[t=79.000] User A12 MEMPOOL_ADD idx=630 sent tx A12-tx34
+[t=79.000] User A13 MEMPOOL_ADD idx=631 sent tx A13-tx33
+[t=79.000] User A15 MEMPOOL_ADD idx=632 sent tx A15-tx34
+[t=79.500] User A1 MEMPOOL_ADD idx=633 sent tx A1-tx33
+[t=79.500] User A4 MEMPOOL_ADD idx=634 sent tx A4-tx30
+[t=79.500] User A15 MEMPOOL_ADD idx=635 sent tx A15-tx35
+[t=79.500] User A17 MEMPOOL_ADD idx=636 sent tx A17-tx26
+[t=79.500] User A18 MEMPOOL_ADD idx=637 sent tx A18-tx29
+[t=79.500] User A19 MEMPOOL_ADD idx=638 sent tx A19-tx37
+[t=80.000] User A0 MEMPOOL_ADD idx=639 sent tx A0-tx32
+[t=80.000] User A1 MEMPOOL_ADD idx=640 sent tx A1-tx34
+[t=80.000] User A4 MEMPOOL_ADD idx=641 sent tx A4-tx31
+[t=80.000] User A10 MEMPOOL_ADD idx=642 sent tx A10-tx31
+[t=80.000] User A13 MEMPOOL_ADD idx=643 sent tx A13-tx34
+[t=80.000] User A14 MEMPOOL_ADD idx=644 sent tx A14-tx31
+[t=80.000] User A15 MEMPOOL_ADD idx=645 sent tx A15-tx36
+[t=80.000] User A17 MEMPOOL_ADD idx=646 sent tx A17-tx27
+[t=80.000] User A18 MEMPOOL_ADD idx=647 sent tx A18-tx30
+[t=80.500] User A2 MEMPOOL_ADD idx=648 sent tx A2-tx22
+[t=80.500] User A3 MEMPOOL_ADD idx=649 sent tx A3-tx50
+[t=80.500] User A16 MEMPOOL_ADD idx=650 sent tx A16-tx31
+[t=81.000] BUILDER_TICK builder=0
+[t=81.000] User A0 MEMPOOL_ADD idx=651 sent tx A0-tx33
+[t=81.000] User A4 MEMPOOL_ADD idx=652 sent tx A4-tx32
+[t=81.000] User A8 MEMPOOL_ADD idx=653 sent tx A8-tx30
+[t=81.000] User A12 MEMPOOL_ADD idx=654 sent tx A12-tx35
+[t=81.000] User A14 MEMPOOL_ADD idx=655 sent tx A14-tx32
+[t=81.000] User A19 MEMPOOL_ADD idx=656 sent tx A19-tx38
+[t=81.500] User A0 MEMPOOL_ADD idx=657 sent tx A0-tx34
+[t=81.500] User A1 MEMPOOL_ADD idx=658 sent tx A1-tx35
+[t=81.500] User A17 MEMPOOL_ADD idx=659 sent tx A17-tx28
+[t=82.000] User A8 MEMPOOL_ADD idx=660 sent tx A8-tx31
+[t=82.000] User A15 MEMPOOL_ADD idx=661 sent tx A15-tx37
+[t=82.500] User A0 MEMPOOL_ADD idx=662 sent tx A0-tx35
+[t=82.500] User A2 MEMPOOL_ADD idx=663 sent tx A2-tx23
+[t=82.500] User A4 MEMPOOL_ADD idx=664 sent tx A4-tx33
+[t=82.500] User A8 MEMPOOL_ADD idx=665 sent tx A8-tx32
+[t=82.500] User A11 MEMPOOL_ADD idx=666 sent tx A11-tx26
+[t=82.500] User A17 MEMPOOL_ADD idx=667 sent tx A17-tx29
+[t=83.000] User A0 MEMPOOL_ADD idx=668 sent tx A0-tx36
+[t=83.000] User A2 MEMPOOL_ADD idx=669 sent tx A2-tx24
+[t=83.000] User A3 MEMPOOL_ADD idx=670 sent tx A3-tx51
+[t=83.000] User A8 MEMPOOL_ADD idx=671 sent tx A8-tx33
+[t=83.000] User A11 MEMPOOL_ADD idx=672 sent tx A11-tx27
+[t=83.000] User A14 MEMPOOL_ADD idx=673 sent tx A14-tx33
+[t=83.000] User A15 MEMPOOL_ADD idx=674 sent tx A15-tx38
+[t=83.500] User A3 MEMPOOL_ADD idx=675 sent tx A3-tx52
+[t=83.500] User A12 MEMPOOL_ADD idx=676 sent tx A12-tx36
+
+[t=84.000] VALIDATOR slot=6 builder id=0 block_len=107
+[t=84.000] SLOT_END slot=6
+[t=84.000] POOLS_END 
+pool | eth | usdc
+A | 14273347583527218632239 | 53530934944136
+B | 17129129710714336881628 | 54069742809380
+
+[t=84.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 90.0 | 133004160612 | 0
+A1 | 94.0 | 118526026494 | 0
+A2 | 95.0 | 115189781209 | 0
+A3 | 92.0 | 123378055533 | 0
+A4 | 94.0 | 118191505023 | 0
+A5 | 96.0 | 112468042028 | 0
+A6 | 93.0 | 122440450469 | 0
+A7 | 91.0 | 131181052021 | 0
+A8 | 94.0 | 117174630347 | 0
+A9 | 92.0 | 125752320550 | 0
+A10 | 94.0 | 120608150991 | 0
+A11 | 93.0 | 122302168723 | 0
+A12 | 97.0 | 107799243399 | 0
+A13 | 96.0 | 112631370877 | 0
+A14 | 94.0 | 119801699001 | 0
+A15 | 93.0 | 124075384301 | 0
+A16 | 96.0 | 112897018804 | 0
+A17 | 93.0 | 121870094969 | 0
+A18 | 94.0 | 119017252349 | 0
+A19 | 92.0 | 124716427375 | 0
+
+[t=84.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 342965411409 | 0
+
+----------------------------------------------------------
+[t=84.000] SLOT_START slot=7
+[t=84.000] POOLS_START 
+pool | eth | usdc
+A | 14273347583527218632239 | 53530934944136
+B | 17129129710714336881628 | 54069742809380
+
+[t=84.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 90.0 | 133004160612 | 0
+A1 | 94.0 | 118526026494 | 0
+A2 | 95.0 | 115189781209 | 0
+A3 | 92.0 | 123378055533 | 0
+A4 | 94.0 | 118191505023 | 0
+A5 | 96.0 | 112468042028 | 0
+A6 | 93.0 | 122440450469 | 0
+A7 | 91.0 | 131181052021 | 0
+A8 | 94.0 | 117174630347 | 0
+A9 | 92.0 | 125752320550 | 0
+A10 | 94.0 | 120608150991 | 0
+A11 | 93.0 | 122302168723 | 0
+A12 | 97.0 | 107799243399 | 0
+A13 | 96.0 | 112631370877 | 0
+A14 | 94.0 | 119801699001 | 0
+A15 | 93.0 | 124075384301 | 0
+A16 | 96.0 | 112897018804 | 0
+A17 | 93.0 | 121870094969 | 0
+A18 | 94.0 | 119017252349 | 0
+A19 | 92.0 | 124716427375 | 0
+
+[t=84.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 342965411409 | 0
+
+[t=84.000] BUILDER_TICK builder=0
+[t=84.000] User A1 MEMPOOL_ADD idx=677 sent tx A1-tx36
+[t=84.000] User A13 MEMPOOL_ADD idx=678 sent tx A13-tx35
+[t=84.500] User A3 MEMPOOL_ADD idx=679 sent tx A3-tx53
+[t=84.500] User A13 MEMPOOL_ADD idx=680 sent tx A13-tx36
+[t=85.000] User A0 MEMPOOL_ADD idx=681 sent tx A0-tx37
+[t=85.000] User A12 MEMPOOL_ADD idx=682 sent tx A12-tx37
+[t=85.000] User A13 MEMPOOL_ADD idx=683 sent tx A13-tx37
+[t=85.500] User A1 MEMPOOL_ADD idx=684 sent tx A1-tx37
+[t=85.500] User A10 MEMPOOL_ADD idx=685 sent tx A10-tx32
+[t=85.500] User A17 MEMPOOL_ADD idx=686 sent tx A17-tx30
+[t=86.000] User A3 MEMPOOL_ADD idx=687 sent tx A3-tx54
+[t=86.000] User A8 MEMPOOL_ADD idx=688 sent tx A8-tx34
+[t=86.500] User A6 MEMPOOL_ADD idx=689 sent tx A6-tx32
+[t=86.500] User A9 MEMPOOL_ADD idx=690 sent tx A9-tx23
+[t=86.500] User A12 MEMPOOL_ADD idx=691 sent tx A12-tx38
+[t=87.000] BUILDER_TICK builder=0
+[t=87.000] User A1 MEMPOOL_ADD idx=692 sent tx A1-tx38
+[t=87.000] User A6 MEMPOOL_ADD idx=693 sent tx A6-tx33
+[t=87.000] User A8 MEMPOOL_ADD idx=694 sent tx A8-tx35
+[t=87.000] User A10 MEMPOOL_ADD idx=695 sent tx A10-tx33
+[t=87.500] User A0 MEMPOOL_ADD idx=696 sent tx A0-tx38
+[t=87.500] User A3 MEMPOOL_ADD idx=697 sent tx A3-tx55
+[t=87.500] User A4 MEMPOOL_ADD idx=698 sent tx A4-tx34
+[t=87.500] User A9 MEMPOOL_ADD idx=699 sent tx A9-tx24
+[t=87.500] User A13 MEMPOOL_ADD idx=700 sent tx A13-tx38
+[t=87.500] User A15 MEMPOOL_ADD idx=701 sent tx A15-tx39
+[t=87.500] User A19 MEMPOOL_ADD idx=702 sent tx A19-tx39
+[t=88.000] User A1 MEMPOOL_ADD idx=703 sent tx A1-tx39
+[t=88.000] User A2 MEMPOOL_ADD idx=704 sent tx A2-tx25
+[t=88.000] User A7 MEMPOOL_ADD idx=705 sent tx A7-tx33
+[t=88.500] User A2 MEMPOOL_ADD idx=706 sent tx A2-tx26
+[t=88.500] User A10 MEMPOOL_ADD idx=707 sent tx A10-tx34
+[t=88.500] User A15 MEMPOOL_ADD idx=708 sent tx A15-tx40
+[t=88.500] User A17 MEMPOOL_ADD idx=709 sent tx A17-tx31
+[t=89.000] User A5 MEMPOOL_ADD idx=710 sent tx A5-tx33
+[t=89.000] User A8 MEMPOOL_ADD idx=711 sent tx A8-tx36
+[t=89.000] User A9 MEMPOOL_ADD idx=712 sent tx A9-tx25
+[t=89.000] User A15 MEMPOOL_ADD idx=713 sent tx A15-tx41
+[t=89.000] User A18 MEMPOOL_ADD idx=714 sent tx A18-tx31
+[t=89.500] User A5 MEMPOOL_ADD idx=715 sent tx A5-tx34
+[t=89.500] User A6 MEMPOOL_ADD idx=716 sent tx A6-tx34
+[t=89.500] User A13 MEMPOOL_ADD idx=717 sent tx A13-tx39
+[t=89.500] User A16 MEMPOOL_ADD idx=718 sent tx A16-tx32
+[t=90.000] BUILDER_TICK builder=0
+[t=90.000] User A1 MEMPOOL_ADD idx=719 sent tx A1-tx40
+[t=90.000] User A10 MEMPOOL_ADD idx=720 sent tx A10-tx35
+[t=90.000] User A18 MEMPOOL_ADD idx=721 sent tx A18-tx32
+[t=90.500] User A0 MEMPOOL_ADD idx=722 sent tx A0-tx39
+[t=90.500] User A1 MEMPOOL_ADD idx=723 sent tx A1-tx41
+[t=90.500] User A16 MEMPOOL_ADD idx=724 sent tx A16-tx33
+[t=90.500] User A17 MEMPOOL_ADD idx=725 sent tx A17-tx32
+[t=90.500] User A18 MEMPOOL_ADD idx=726 sent tx A18-tx33
+[t=91.000] User A3 MEMPOOL_ADD idx=727 sent tx A3-tx56
+[t=91.000] User A5 MEMPOOL_ADD idx=728 sent tx A5-tx35
+[t=91.000] User A7 MEMPOOL_ADD idx=729 sent tx A7-tx34
+[t=91.000] User A11 MEMPOOL_ADD idx=730 sent tx A11-tx28
+[t=91.000] User A15 MEMPOOL_ADD idx=731 sent tx A15-tx42
+[t=91.000] User A17 MEMPOOL_ADD idx=732 sent tx A17-tx33
+[t=91.500] User A0 MEMPOOL_ADD idx=733 sent tx A0-tx40
+[t=91.500] User A4 MEMPOOL_ADD idx=734 sent tx A4-tx35
+[t=91.500] User A10 MEMPOOL_ADD idx=735 sent tx A10-tx36
+[t=91.500] User A18 MEMPOOL_ADD idx=736 sent tx A18-tx34
+[t=92.000] User A1 MEMPOOL_ADD idx=737 sent tx A1-tx42
+[t=92.000] User A3 MEMPOOL_ADD idx=738 sent tx A3-tx57
+[t=92.000] User A4 MEMPOOL_ADD idx=739 sent tx A4-tx36
+[t=92.000] User A14 MEMPOOL_ADD idx=740 sent tx A14-tx34
+[t=92.500] User A0 MEMPOOL_ADD idx=741 sent tx A0-tx41
+[t=92.500] User A6 MEMPOOL_ADD idx=742 sent tx A6-tx35
+[t=92.500] User A8 MEMPOOL_ADD idx=743 sent tx A8-tx37
+[t=92.500] User A11 MEMPOOL_ADD idx=744 sent tx A11-tx29
+[t=92.500] User A14 MEMPOOL_ADD idx=745 sent tx A14-tx35
+[t=92.500] User A15 MEMPOOL_ADD idx=746 sent tx A15-tx43
+[t=92.500] User A16 MEMPOOL_ADD idx=747 sent tx A16-tx34
+[t=93.000] BUILDER_TICK builder=0
+[t=93.000] User A14 MEMPOOL_ADD idx=748 sent tx A14-tx36
+[t=93.000] User A18 MEMPOOL_ADD idx=749 sent tx A18-tx35
+[t=93.500] User A0 MEMPOOL_ADD idx=750 sent tx A0-tx42
+[t=93.500] User A5 MEMPOOL_ADD idx=751 sent tx A5-tx36
+[t=93.500] User A8 MEMPOOL_ADD idx=752 sent tx A8-tx38
+[t=93.500] User A13 MEMPOOL_ADD idx=753 sent tx A13-tx40
+[t=93.500] User A16 MEMPOOL_ADD idx=754 sent tx A16-tx35
+[t=94.000] User A4 MEMPOOL_ADD idx=755 sent tx A4-tx37
+[t=94.000] User A16 MEMPOOL_ADD idx=756 sent tx A16-tx36
+[t=94.500] User A1 MEMPOOL_ADD idx=757 sent tx A1-tx43
+[t=94.500] User A7 MEMPOOL_ADD idx=758 sent tx A7-tx35
+[t=94.500] User A8 MEMPOOL_ADD idx=759 sent tx A8-tx39
+[t=94.500] User A9 MEMPOOL_ADD idx=760 sent tx A9-tx26
+[t=94.500] User A10 MEMPOOL_ADD idx=761 sent tx A10-tx37
+[t=94.500] User A12 MEMPOOL_ADD idx=762 sent tx A12-tx39
+[t=94.500] User A13 MEMPOOL_ADD idx=763 sent tx A13-tx41
+[t=95.000] User A1 MEMPOOL_ADD idx=764 sent tx A1-tx44
+[t=95.000] User A3 MEMPOOL_ADD idx=765 sent tx A3-tx58
+[t=95.000] User A17 MEMPOOL_ADD idx=766 sent tx A17-tx34
+[t=95.500] User A2 MEMPOOL_ADD idx=767 sent tx A2-tx27
+[t=95.500] User A7 MEMPOOL_ADD idx=768 sent tx A7-tx36
+[t=95.500] User A17 MEMPOOL_ADD idx=769 sent tx A17-tx35
+
+[t=96.000] VALIDATOR slot=7 builder id=0 block_len=99
+[t=96.000] SLOT_END slot=7
+[t=96.000] POOLS_END 
+pool | eth | usdc
+A | 14288639257039979202093 | 53473890138321
+B | 17124959221248490222230 | 54083184472740
+
+[t=96.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 88.0 | 137089959369 | 0
+A1 | 94.0 | 119705440216 | 0
+A2 | 95.0 | 115130237140 | 0
+A3 | 92.0 | 124657349288 | 0
+A4 | 94.0 | 120232505458 | 0
+A5 | 95.0 | 113495799799 | 0
+A6 | 93.0 | 123849454730 | 0
+A7 | 89.0 | 135432190578 | 0
+A8 | 93.0 | 122288900525 | 0
+A9 | 92.0 | 127071211750 | 0
+A10 | 92.0 | 125998756056 | 0
+A11 | 93.0 | 123057903285 | 0
+A12 | 97.0 | 107505271270 | 0
+A13 | 95.0 | 116917540783 | 0
+A14 | 93.0 | 122325986816 | 0
+A15 | 92.0 | 128265889089 | 0
+A16 | 95.0 | 114411912187 | 0
+A17 | 93.0 | 122265987968 | 0
+A18 | 94.0 | 117574817785 | 0
+A19 | 92.0 | 123199336580 | 0
+
+[t=96.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 349116938267 | 0
+
+----------------------------------------------------------
+[t=96.000] SLOT_START slot=8
+[t=96.000] POOLS_START 
+pool | eth | usdc
+A | 14288639257039979202093 | 53473890138321
+B | 17124959221248490222230 | 54083184472740
+
+[t=96.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 88.0 | 137089959369 | 0
+A1 | 94.0 | 119705440216 | 0
+A2 | 95.0 | 115130237140 | 0
+A3 | 92.0 | 124657349288 | 0
+A4 | 94.0 | 120232505458 | 0
+A5 | 95.0 | 113495799799 | 0
+A6 | 93.0 | 123849454730 | 0
+A7 | 89.0 | 135432190578 | 0
+A8 | 93.0 | 122288900525 | 0
+A9 | 92.0 | 127071211750 | 0
+A10 | 92.0 | 125998756056 | 0
+A11 | 93.0 | 123057903285 | 0
+A12 | 97.0 | 107505271270 | 0
+A13 | 95.0 | 116917540783 | 0
+A14 | 93.0 | 122325986816 | 0
+A15 | 92.0 | 128265889089 | 0
+A16 | 95.0 | 114411912187 | 0
+A17 | 93.0 | 122265987968 | 0
+A18 | 94.0 | 117574817785 | 0
+A19 | 92.0 | 123199336580 | 0
+
+[t=96.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 349116938267 | 0
+
+[t=96.000] BUILDER_TICK builder=0
+[t=96.000] User A6 MEMPOOL_ADD idx=770 sent tx A6-tx36
+[t=96.000] User A16 MEMPOOL_ADD idx=771 sent tx A16-tx37
+[t=96.500] User A1 MEMPOOL_ADD idx=772 sent tx A1-tx45
+[t=96.500] User A3 MEMPOOL_ADD idx=773 sent tx A3-tx59
+[t=96.500] User A12 MEMPOOL_ADD idx=774 sent tx A12-tx40
+[t=96.500] User A13 MEMPOOL_ADD idx=775 sent tx A13-tx42
+[t=96.500] User A17 MEMPOOL_ADD idx=776 sent tx A17-tx36
+[t=97.000] User A3 MEMPOOL_ADD idx=777 sent tx A3-tx60
+[t=97.000] User A4 MEMPOOL_ADD idx=778 sent tx A4-tx38
+[t=97.000] User A8 MEMPOOL_ADD idx=779 sent tx A8-tx40
+[t=97.500] User A14 MEMPOOL_ADD idx=780 sent tx A14-tx37
+[t=97.500] User A18 MEMPOOL_ADD idx=781 sent tx A18-tx36
+[t=98.000] User A1 MEMPOOL_ADD idx=782 sent tx A1-tx46
+[t=98.000] User A4 MEMPOOL_ADD idx=783 sent tx A4-tx39
+[t=98.000] User A17 MEMPOOL_ADD idx=784 sent tx A17-tx37
+[t=98.000] User A18 MEMPOOL_ADD idx=785 sent tx A18-tx37
+[t=98.500] User A8 MEMPOOL_ADD idx=786 sent tx A8-tx41
+[t=98.500] User A10 MEMPOOL_ADD idx=787 sent tx A10-tx38
+[t=99.000] BUILDER_TICK builder=0
+[t=99.000] User A0 MEMPOOL_ADD idx=788 sent tx A0-tx43
+[t=99.000] User A3 MEMPOOL_ADD idx=789 sent tx A3-tx61
+[t=99.000] User A9 MEMPOOL_ADD idx=790 sent tx A9-tx27
+[t=99.000] User A14 MEMPOOL_ADD idx=791 sent tx A14-tx38
+[t=99.500] User A0 MEMPOOL_ADD idx=792 sent tx A0-tx44
+[t=99.500] User A2 MEMPOOL_ADD idx=793 sent tx A2-tx28
+[t=99.500] User A6 MEMPOOL_ADD idx=794 sent tx A6-tx37
+[t=99.500] User A7 MEMPOOL_ADD idx=795 sent tx A7-tx37
+[t=99.500] User A11 MEMPOOL_ADD idx=796 sent tx A11-tx30
+[t=99.500] User A12 MEMPOOL_ADD idx=797 sent tx A12-tx41
+[t=99.500] User A15 MEMPOOL_ADD idx=798 sent tx A15-tx44
+[t=100.000] User A0 MEMPOOL_ADD idx=799 sent tx A0-tx45
+[t=100.000] User A4 MEMPOOL_ADD idx=800 sent tx A4-tx40
+[t=100.000] User A9 MEMPOOL_ADD idx=801 sent tx A9-tx28
+[t=100.000] User A11 MEMPOOL_ADD idx=802 sent tx A11-tx31
+[t=100.000] User A17 MEMPOOL_ADD idx=803 sent tx A17-tx38
+[t=100.500] User A0 MEMPOOL_ADD idx=804 sent tx A0-tx46
+[t=100.500] User A7 MEMPOOL_ADD idx=805 sent tx A7-tx38
+[t=100.500] User A9 MEMPOOL_ADD idx=806 sent tx A9-tx29
+[t=100.500] User A12 MEMPOOL_ADD idx=807 sent tx A12-tx42
+[t=100.500] User A15 MEMPOOL_ADD idx=808 sent tx A15-tx45
+[t=100.500] User A18 MEMPOOL_ADD idx=809 sent tx A18-tx38
+[t=101.000] User A6 MEMPOOL_ADD idx=810 sent tx A6-tx38
+[t=101.000] User A8 MEMPOOL_ADD idx=811 sent tx A8-tx42
+[t=101.000] User A9 MEMPOOL_ADD idx=812 sent tx A9-tx30
+[t=101.000] User A10 MEMPOOL_ADD idx=813 sent tx A10-tx39
+[t=101.000] User A12 MEMPOOL_ADD idx=814 sent tx A12-tx43
+[t=101.000] User A18 MEMPOOL_ADD idx=815 sent tx A18-tx39
+[t=101.500] User A2 MEMPOOL_ADD idx=816 sent tx A2-tx29
+[t=101.500] User A16 MEMPOOL_ADD idx=817 sent tx A16-tx38
+[t=102.000] BUILDER_TICK builder=0
+[t=102.000] User A2 MEMPOOL_ADD idx=818 sent tx A2-tx30
+[t=102.000] User A3 MEMPOOL_ADD idx=819 sent tx A3-tx62
+[t=102.000] User A6 MEMPOOL_ADD idx=820 sent tx A6-tx39
+[t=102.000] User A10 MEMPOOL_ADD idx=821 sent tx A10-tx40
+[t=102.000] User A17 MEMPOOL_ADD idx=822 sent tx A17-tx39
+[t=102.000] User A19 MEMPOOL_ADD idx=823 sent tx A19-tx40
+[t=102.500] User A2 MEMPOOL_ADD idx=824 sent tx A2-tx31
+[t=102.500] User A4 MEMPOOL_ADD idx=825 sent tx A4-tx41
+[t=102.500] User A5 MEMPOOL_ADD idx=826 sent tx A5-tx37
+[t=102.500] User A19 MEMPOOL_ADD idx=827 sent tx A19-tx41
+[t=103.000] User A0 MEMPOOL_ADD idx=828 sent tx A0-tx47
+[t=103.000] User A4 MEMPOOL_ADD idx=829 sent tx A4-tx42
+[t=103.000] User A14 MEMPOOL_ADD idx=830 sent tx A14-tx39
+[t=103.500] User A9 MEMPOOL_ADD idx=831 sent tx A9-tx31
+[t=104.000] User A7 MEMPOOL_ADD idx=832 sent tx A7-tx39
+[t=104.000] User A10 MEMPOOL_ADD idx=833 sent tx A10-tx41
+[t=104.000] User A11 MEMPOOL_ADD idx=834 sent tx A11-tx32
+[t=104.000] User A15 MEMPOOL_ADD idx=835 sent tx A15-tx46
+[t=104.500] User A5 MEMPOOL_ADD idx=836 sent tx A5-tx38
+[t=104.500] User A8 MEMPOOL_ADD idx=837 sent tx A8-tx43
+[t=104.500] User A13 MEMPOOL_ADD idx=838 sent tx A13-tx43
+[t=104.500] User A16 MEMPOOL_ADD idx=839 sent tx A16-tx39
+[t=104.500] User A19 MEMPOOL_ADD idx=840 sent tx A19-tx42
+[t=105.000] BUILDER_TICK builder=0
+[t=105.000] User A1 MEMPOOL_ADD idx=841 sent tx A1-tx47
+[t=105.000] User A15 MEMPOOL_ADD idx=842 sent tx A15-tx47
+[t=105.000] User A16 MEMPOOL_ADD idx=843 sent tx A16-tx40
+[t=105.500] User A1 MEMPOOL_ADD idx=844 sent tx A1-tx48
+[t=105.500] User A2 MEMPOOL_ADD idx=845 sent tx A2-tx32
+[t=105.500] User A10 MEMPOOL_ADD idx=846 sent tx A10-tx42
+[t=106.000] User A0 MEMPOOL_ADD idx=847 sent tx A0-tx48
+[t=106.000] User A5 MEMPOOL_ADD idx=848 sent tx A5-tx39
+[t=106.000] User A8 MEMPOOL_ADD idx=849 sent tx A8-tx44
+[t=106.000] User A10 MEMPOOL_ADD idx=850 sent tx A10-tx43
+[t=106.500] User A0 MEMPOOL_ADD idx=851 sent tx A0-tx49
+[t=106.500] User A7 MEMPOOL_ADD idx=852 sent tx A7-tx40
+[t=106.500] User A14 MEMPOOL_ADD idx=853 sent tx A14-tx40
+[t=106.500] User A15 MEMPOOL_ADD idx=854 sent tx A15-tx48
+[t=106.500] User A16 MEMPOOL_ADD idx=855 sent tx A16-tx41
+[t=107.000] User A0 MEMPOOL_ADD idx=856 sent tx A0-tx50
+[t=107.000] User A3 MEMPOOL_ADD idx=857 sent tx A3-tx63
+[t=107.000] User A5 MEMPOOL_ADD idx=858 sent tx A5-tx40
+[t=107.000] User A6 MEMPOOL_ADD idx=859 sent tx A6-tx40
+[t=107.000] User A11 MEMPOOL_ADD idx=860 sent tx A11-tx33
+[t=107.000] User A12 MEMPOOL_ADD idx=861 sent tx A12-tx44
+[t=107.000] User A15 MEMPOOL_ADD idx=862 sent tx A15-tx49
+[t=107.500] User A2 MEMPOOL_ADD idx=863 sent tx A2-tx33
+[t=107.500] User A5 MEMPOOL_ADD idx=864 sent tx A5-tx41
+
+[t=108.000] VALIDATOR slot=8 builder id=0 block_len=95
+[t=108.000] SLOT_END slot=8
+[t=108.000] POOLS_END 
+pool | eth | usdc
+A | 14308965051636212368584 | 53398214836829
+B | 17121699576520740241058 | 54093741445171
+
+[t=108.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 86.0 | 143216417375 | 0
+A1 | 93.0 | 122010902928 | 0
+A2 | 92.0 | 124038568160 | 0
+A3 | 91.0 | 126616841559 | 0
+A4 | 91.0 | 128402127094 | 0
+A5 | 95.0 | 115821646445 | 0
+A6 | 93.0 | 125293366440 | 0
+A7 | 88.0 | 139143403147 | 0
+A8 | 92.0 | 123784908249 | 0
+A9 | 91.0 | 128680732550 | 0
+A10 | 92.0 | 126533229457 | 0
+A11 | 93.0 | 123205876784 | 0
+A12 | 96.0 | 111328608977 | 0
+A13 | 95.0 | 116358816211 | 0
+A14 | 91.0 | 128792229944 | 0
+A15 | 92.0 | 128786712601 | 0
+A16 | 94.0 | 117374132452 | 0
+A17 | 92.0 | 124343262755 | 0
+A18 | 93.0 | 120923255366 | 0
+A19 | 92.0 | 124786949862 | 0
+
+[t=108.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 355269729644 | 0
+
+----------------------------------------------------------
+[t=108.000] SLOT_START slot=9
+[t=108.000] POOLS_START 
+pool | eth | usdc
+A | 14308965051636212368584 | 53398214836829
+B | 17121699576520740241058 | 54093741445171
+
+[t=108.000] USERS_START 
+id | eth | usdc | nonce
+A0 | 86.0 | 143216417375 | 0
+A1 | 93.0 | 122010902928 | 0
+A2 | 92.0 | 124038568160 | 0
+A3 | 91.0 | 126616841559 | 0
+A4 | 91.0 | 128402127094 | 0
+A5 | 95.0 | 115821646445 | 0
+A6 | 93.0 | 125293366440 | 0
+A7 | 88.0 | 139143403147 | 0
+A8 | 92.0 | 123784908249 | 0
+A9 | 91.0 | 128680732550 | 0
+A10 | 92.0 | 126533229457 | 0
+A11 | 93.0 | 123205876784 | 0
+A12 | 96.0 | 111328608977 | 0
+A13 | 95.0 | 116358816211 | 0
+A14 | 91.0 | 128792229944 | 0
+A15 | 92.0 | 128786712601 | 0
+A16 | 94.0 | 117374132452 | 0
+A17 | 92.0 | 124343262755 | 0
+A18 | 93.0 | 120923255366 | 0
+A19 | 92.0 | 124786949862 | 0
+
+[t=108.000] BUILDER_START 
+id | eth | usdc | nonce
+0 | 299.0 | 355269729644 | 0
+
+[t=108.000] BUILDER_TICK builder=0
+[t=108.000] User A1 MEMPOOL_ADD idx=865 sent tx A1-tx49
+[t=108.000] User A2 MEMPOOL_ADD idx=866 sent tx A2-tx34
+[t=108.500] User A11 MEMPOOL_ADD idx=867 sent tx A11-tx34
+[t=108.500] User A12 MEMPOOL_ADD idx=868 sent tx A12-tx45
+[t=108.500] User A16 MEMPOOL_ADD idx=869 sent tx A16-tx42
+[t=109.000] User A0 MEMPOOL_ADD idx=870 sent tx A0-tx51
+[t=109.000] User A3 MEMPOOL_ADD idx=871 sent tx A3-tx64
+[t=109.000] User A5 MEMPOOL_ADD idx=872 sent tx A5-tx42
+[t=109.000] User A14 MEMPOOL_ADD idx=873 sent tx A14-tx41
+[t=109.000] User A19 MEMPOOL_ADD idx=874 sent tx A19-tx43
+[t=109.500] User A0 MEMPOOL_ADD idx=875 sent tx A0-tx52
+[t=109.500] User A5 MEMPOOL_ADD idx=876 sent tx A5-tx43
+[t=109.500] User A7 MEMPOOL_ADD idx=877 sent tx A7-tx41
+[t=109.500] User A8 MEMPOOL_ADD idx=878 sent tx A8-tx45
+[t=110.000] User A0 MEMPOOL_ADD idx=879 sent tx A0-tx53
+[t=110.000] User A17 MEMPOOL_ADD idx=880 sent tx A17-tx40
+[t=110.500] User A3 MEMPOOL_ADD idx=881 sent tx A3-tx65
+[t=110.500] User A5 MEMPOOL_ADD idx=882 sent tx A5-tx44
+[t=110.500] User A9 MEMPOOL_ADD idx=883 sent tx A9-tx32
+[t=110.500] User A10 MEMPOOL_ADD idx=884 sent tx A10-tx44
+[t=110.500] User A11 MEMPOOL_ADD idx=885 sent tx A11-tx35
+[t=110.500] User A12 MEMPOOL_ADD idx=886 sent tx A12-tx46
+[t=111.000] BUILDER_TICK builder=0
+[t=111.000] User A1 MEMPOOL_ADD idx=887 sent tx A1-tx50
+[t=111.000] User A10 MEMPOOL_ADD idx=888 sent tx A10-tx45
+[t=111.000] User A11 MEMPOOL_ADD idx=889 sent tx A11-tx36
+[t=111.000] User A12 MEMPOOL_ADD idx=890 sent tx A12-tx47
+[t=111.000] User A14 MEMPOOL_ADD idx=891 sent tx A14-tx42
+[t=111.500] User A6 MEMPOOL_ADD idx=892 sent tx A6-tx41
+[t=111.500] User A7 MEMPOOL_ADD idx=893 sent tx A7-tx42
+[t=111.500] User A17 MEMPOOL_ADD idx=894 sent tx A17-tx41
+[t=111.500] User A18 MEMPOOL_ADD idx=895 sent tx A18-tx40
+[t=112.000] User A1 MEMPOOL_ADD idx=896 sent tx A1-tx51
+[t=112.000] User A11 MEMPOOL_ADD idx=897 sent tx A11-tx37
+[t=112.000] User A15 MEMPOOL_ADD idx=898 sent tx A15-tx50
+[t=112.000] User A16 MEMPOOL_ADD idx=899 sent tx A16-tx43
+[t=112.000] User A17 MEMPOOL_ADD idx=900 sent tx A17-tx42
+[t=112.000] User A18 MEMPOOL_ADD idx=901 sent tx A18-tx41
+[t=112.500] User A1 MEMPOOL_ADD idx=902 sent tx A1-tx52
+[t=112.500] User A7 MEMPOOL_ADD idx=903 sent tx A7-tx43
+[t=112.500] User A8 MEMPOOL_ADD idx=904 sent tx A8-tx46
+[t=112.500] User A13 MEMPOOL_ADD idx=905 sent tx A13-tx44
+[t=112.500] User A16 MEMPOOL_ADD idx=906 sent tx A16-tx44
+[t=112.500] User A19 MEMPOOL_ADD idx=907 sent tx A19-tx44
+[t=113.000] User A3 MEMPOOL_ADD idx=908 sent tx A3-tx66
+[t=113.000] User A6 MEMPOOL_ADD idx=909 sent tx A6-tx42
+[t=113.000] User A9 MEMPOOL_ADD idx=910 sent tx A9-tx33
+[t=113.000] User A14 MEMPOOL_ADD idx=911 sent tx A14-tx43
+[t=113.000] User A16 MEMPOOL_ADD idx=912 sent tx A16-tx45
+[t=113.000] User A18 MEMPOOL_ADD idx=913 sent tx A18-tx42
+[t=113.500] User A4 MEMPOOL_ADD idx=914 sent tx A4-tx43
+[t=113.500] User A6 MEMPOOL_ADD idx=915 sent tx A6-tx43
+[t=113.500] User A10 MEMPOOL_ADD idx=916 sent tx A10-tx46
+[t=113.500] User A11 MEMPOOL_ADD idx=917 sent tx A11-tx38
+[t=113.500] User A12 MEMPOOL_ADD idx=918 sent tx A12-tx48
+[t=113.500] User A18 MEMPOOL_ADD idx=919 sent tx A18-tx43
+[t=114.000] BUILDER_TICK builder=0
+[t=114.000] User A4 MEMPOOL_ADD idx=920 sent tx A4-tx44
+[t=114.000] User A16 MEMPOOL_ADD idx=921 sent tx A16-tx46
+[t=114.000] User A17 MEMPOOL_ADD idx=922 sent tx A17-tx43
+[t=114.500] User A3 MEMPOOL_ADD idx=923 sent tx A3-tx67
+[t=114.500] User A14 MEMPOOL_ADD idx=924 sent tx A14-tx44
+[t=114.500] User A15 MEMPOOL_ADD idx=925 sent tx A15-tx51
+[t=114.500] User A16 MEMPOOL_ADD idx=926 sent tx A16-tx47
+[t=114.500] User A17 MEMPOOL_ADD idx=927 sent tx A17-tx44
+[t=114.500] User A19 MEMPOOL_ADD idx=928 sent tx A19-tx45
+[t=115.000] User A13 MEMPOOL_ADD idx=929 sent tx A13-tx45
+[t=115.000] User A14 MEMPOOL_ADD idx=930 sent tx A14-tx45
+[t=115.000] User A15 MEMPOOL_ADD idx=931 sent tx A15-tx52
+[t=115.500] User A0 MEMPOOL_ADD idx=932 sent tx A0-tx54
+[t=115.500] User A13 MEMPOOL_ADD idx=933 sent tx A13-tx46
+[t=115.500] User A15 MEMPOOL_ADD idx=934 sent tx A15-tx53
+[t=115.500] User A16 MEMPOOL_ADD idx=935 sent tx A16-tx48
+[t=115.500] User A19 MEMPOOL_ADD idx=936 sent tx A19-tx46
+[t=116.000] User A4 MEMPOOL_ADD idx=937 sent tx A4-tx45
+[t=116.000] User A12 MEMPOOL_ADD idx=938 sent tx A12-tx49
+[t=116.000] User A13 MEMPOOL_ADD idx=939 sent tx A13-tx47
+[t=116.000] User A17 MEMPOOL_ADD idx=940 sent tx A17-tx45
+[t=116.500] User A1 MEMPOOL_ADD idx=941 sent tx A1-tx53
+[t=116.500] User A11 MEMPOOL_ADD idx=942 sent tx A11-tx39
+[t=117.000] BUILDER_TICK builder=0
+[t=117.000] User A19 MEMPOOL_ADD idx=943 sent tx A19-tx47
+[t=117.500] User A0 MEMPOOL_ADD idx=944 sent tx A0-tx55
+[t=117.500] User A5 MEMPOOL_ADD idx=945 sent tx A5-tx45
+[t=117.500] User A14 MEMPOOL_ADD idx=946 sent tx A14-tx46
+[t=118.000] User A0 MEMPOOL_ADD idx=947 sent tx A0-tx56
+[t=118.000] User A3 MEMPOOL_ADD idx=948 sent tx A3-tx68
+[t=118.000] User A14 MEMPOOL_ADD idx=949 sent tx A14-tx47
+[t=118.000] User A16 MEMPOOL_ADD idx=950 sent tx A16-tx49
+[t=118.000] User A17 MEMPOOL_ADD idx=951 sent tx A17-tx46
+[t=118.500] User A10 MEMPOOL_ADD idx=952 sent tx A10-tx47
+[t=118.500] User A11 MEMPOOL_ADD idx=953 sent tx A11-tx40
+[t=118.500] User A19 MEMPOOL_ADD idx=954 sent tx A19-tx48
+[t=119.000] User A1 MEMPOOL_ADD idx=955 sent tx A1-tx54
+[t=119.000] User A7 MEMPOOL_ADD idx=956 sent tx A7-tx44
+[t=119.000] User A9 MEMPOOL_ADD idx=957 sent tx A9-tx34
+[t=119.000] User A12 MEMPOOL_ADD idx=958 sent tx A12-tx50
+[t=119.500] User A3 MEMPOOL_ADD idx=959 sent tx A3-tx69
+[t=119.500] User A4 MEMPOOL_ADD idx=960 sent tx A4-tx46
+[t=119.500] User A5 MEMPOOL_ADD idx=961 sent tx A5-tx46
+[t=119.500] User A9 MEMPOOL_ADD idx=962 sent tx A9-tx35
+[t=119.500] User A16 MEMPOOL_ADD idx=963 sent tx A16-tx50
+[t=119.500] User A17 MEMPOOL_ADD idx=964 sent tx A17-tx47
+[t=119.500] User A19 MEMPOOL_ADD idx=965 sent tx A19-tx49
+
+[t=120.000] VALIDATOR slot=9 builder id=0 block_len=104
+[t=120.000] SLOT_END slot=9
+[t=120.000] POOLS_END 
+pool | eth | usdc
+A | 14338902878407536318414 | 53287132224663
+B | 17120628791562649413137 | 54097397347844
+
+[t=120.000] USERS_END 
+id | eth | usdc | nonce
+A0 | 85.0 | 146390028772 | 0
+A1 | 90.0 | 132928405151 | 0
+A2 | 92.0 | 125793641999 | 0
+A3 | 89.0 | 133914868413 | 0
+A4 | 90.0 | 132805334062 | 0
+A5 | 93.0 | 119495698903 | 0
+A6 | 91.0 | 129808671895 | 0
+A7 | 88.0 | 141087754443 | 0
+A8 | 90.0 | 132650699481 | 0
+A9 | 89.0 | 135107603409 | 0
+A10 | 91.0 | 130187193295 | 0
+A11 | 88.0 | 137387926975 | 0
+A12 | 95.0 | 116236776256 | 0
+A13 | 94.0 | 118027650706 | 0
+A14 | 90.0 | 133939897608 | 0
+A15 | 91.0 | 129725451680 | 0
+A16 | 91.0 | 127753224072 | 0
+A17 | 90.0 | 132909882822 | 0
+A18 | 94.0 | 118375304563 | 0
+A19 | 92.0 | 126216903564 | 0
+
+[t=120.000] BUILDER_END 
+id | eth | usdc | nonce
+0 | 299.0 | 361395509424 | 0
+
+----------------------------------------------------------
+[t=120.000] BUILDER_TICK builder=0
+[t=120.000] User A0 MEMPOOL_ADD idx=966 sent tx A0-tx57
+[t=120.000] User A10 MEMPOOL_ADD idx=967 sent tx A10-tx48
+[t=120.000] User A12 MEMPOOL_ADD idx=968 sent tx A12-tx51

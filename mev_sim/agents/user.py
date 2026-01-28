@@ -17,7 +17,7 @@ class User:
 
     def on_event(self, event, engine):
         if event.type == USER_TICK_EVENT:
-            # rozhodnutí: poslat tx?
+            
             if self.rng.random() < P_SEND:
                 fee = engine.state.burn_fee * 1.5
                 target_amm_pool = engine.state.amm_pool_a.snapshot() if self.rng.random() < 0.5 else engine.state.amm_pool_b.snapshot()
@@ -28,27 +28,15 @@ class User:
                 else:
                     amount = int(self.rng.random() * 1000 * USDC_MICRO)
                 
-                tx = Tx(
-                    txid=f"{self.id}-tx{self.nonce}",
-                    sender=self.id,
-                    t_created=engine.time,
-                    
-                    tx_type="swap",
-                    gas_used=GAS_SWAP,
-                    priority_fee=1.0, #FIXME:
-                    max_fee=fee,
-                    nonce=self.nonce,
-                    real_index=0,
-                    status="pending",
-                    
-                    payload={
-                        "amount": amount,
-                        "token": target_token,
-                        "amm_pool": target_amm_pool['name'],
-                    },
-                )
+                priority_fee = int((0.5 + 2.0 * self.rng.random()) * GWEI_TO_WEI)
+                
+                payload={"amount": amount,"token": target_token,"amm_pool": target_amm_pool['name']}
+                burn_fee = engine.state.burn_fee + priority_fee + int(5 * GWEI_TO_WEI)
+		        
+                tx = Tx.make_transaction(f"{self.id}-tx{self.nonce}", self.id, engine.time, "swap", priority_fee, burn_fee, self.nonce, payload)
+
                 self.nonce += 1
                 engine.schedule(engine.time, SEND_TX, {"tx": tx})
 
-            # vždy naplánuj další tick
+            #naplanovani dalsiho ticku
             engine.schedule(engine.time + self.tick, USER_TICK_EVENT, {"user_id": self.user_id})

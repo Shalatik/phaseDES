@@ -5,7 +5,8 @@ from mev_sim.agents.builder_strategies import *
 STRATEGY_REGISTRY = {
 	"fee_order": lambda cfg: OrderBasedFeeStrategy(),
 	"sandwich_only": lambda cfg: SandwichOnlyStrategy(),
-	# "arbitrage_only": lambda cfg: ArbitrageOnlyStrategy(),
+	"arbitrage_only": lambda cfg: ArbitrageOnlyStrategy(),
+	"arbitrage_backrun": lambda cfg: ArbitrageBackrunStrategy(),
 	# "mev_play_it_safe": lambda cfg: MevPlayItSafe(),
 	# "mev_greedy": lambda cfg: MevGreedyStrategy(),
 }

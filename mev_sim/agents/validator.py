@@ -53,16 +53,25 @@ class Validator:
 	def execute_transaction(self, tx, engine):
 		account = engine.state.accounts[tx.sender]
 
-		tip_per_gas_gwei = tx.effective_priority_fee(engine.state.burn_fee)
-		burned_wei = int(tx.gas_used * engine.state.burn_fee)
-		validator_tip_wei = int(tx.gas_used * tip_per_gas_gwei)
-		cost_wei = burned_wei + validator_tip_wei
+		# tip_per_gas_gwei = tx.effective_priority_fee(engine.state.burn_fee)
+		# burned_wei = int(tx.gas_used * engine.state.burn_fee)
+		# validator_tip_wei = int(tx.gas_used * tip_per_gas_gwei)
+		# cost_wei = burned_wei + validator_tip_wei
 
-		# if account.eth_wei < cost_wei:
+		# if account.eth_wei < cost_wei: #TODO:
 		# 	tx.status = "reverted_no_gas"
 		# 	return tx.status
 
+		base_fee = engine.state.burn_fee
+
+		effective_gas_price = min(tx.max_fee, base_fee + tx.priority_fee)
+
+		burned_wei = tx.gas_used * base_fee
+		validator_tip_wei = tx.gas_used * (effective_gas_price - base_fee)
+
+		cost_wei = burned_wei + validator_tip_wei
 		account.eth_wei -= cost_wei
+
 
 		target_amount = int(tx.payload['amount'])
 
